@@ -16,5 +16,9 @@ export default defineConfig({
     ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/nbifrye/www.nbifrye.com" }],
+
+    search: {
+      provider: "local",
+    },
   },
 });

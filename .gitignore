@@ -1,0 +1,11 @@
+**
+!**/
+
+!/.github/workflows/deploy.yml
+!/docs/.vitepress/config.mts
+!/docs/**/*.md
+!/.gitignore
+!/CNAME
+!/package-lock.json
+!/package.json
+!/README.md

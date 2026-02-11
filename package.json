@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:preview": "vitepress preview docs",
+    "fmt": "oxfmt"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.31.0",
+    "vitepress": "^2.0.0-alpha.16"
+  }
+}

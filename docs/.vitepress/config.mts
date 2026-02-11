@@ -11,7 +11,7 @@ export default defineConfig({
     sidebar: [
       {
         text: "Scraps",
-        items: [{ text: "2026/02", link: "/scraps/2026-02" }],
+        items: [{ text: "2026/02/11", link: "/scraps/2026-02-11" }],
       },
     ],
 

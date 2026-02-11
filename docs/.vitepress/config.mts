@@ -8,7 +8,12 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],
 
-    sidebar: [],
+    sidebar: [
+      {
+        text: "Scraps",
+        items: [{ text: "2026/02", link: "/scraps/2026-02" }],
+      },
+    ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/nbifrye/www.nbifrye.com" }],
   },

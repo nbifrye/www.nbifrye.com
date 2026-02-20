@@ -27,7 +27,7 @@
 - OpenID4VP / OpenID4VCI の最新ドラフト・実装状況
 - FAPI 2.0 / OpenID Federation 1.1 の動向
 - W3C Verifiable Credentials Data Model 2.0
-- SD-JWT (Selective Disclosure JWT) / mdoc の普及
+- SD-JWT (RFC 9901) / SD-JWT VC (draft-ietf-oauth-sd-jwt-vc) の実装状況
 - IETF OAuth 2.x 関連 RFC の動き
 - WebAuthn Level 3 / CTAP 2.2 の標準化進捗
 - FIDO Credential Exchange Protocol（CXP / CXF）——パスキーのプロバイダー間移行
@@ -57,6 +57,7 @@
 - NIST SP 800-63-4 最終版——Synced Passkeys の AAL2 認定と影響
 - NIST SP 800 / NISTIR ガイドライン更新
 - OpenID Foundation ワーキンググループ活動
+- HAIP (High Assurance Interoperability Profile) 1.0 と OpenID Foundation 適合テスト・自己認証プログラム
 
 ### Step 3: コンテンツ執筆
 

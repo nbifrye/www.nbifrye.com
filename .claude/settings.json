@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(jq -r '.tool_input.file_path // \"\"'); [[ \"$FILE\" == *.md ]] && cd /home/user/www.nbifrye.com && npm run fmt 2>/dev/null; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}

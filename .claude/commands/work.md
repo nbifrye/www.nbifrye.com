@@ -29,6 +29,8 @@
 - W3C Verifiable Credentials Data Model 2.0
 - SD-JWT (Selective Disclosure JWT) / mdoc の普及
 - IETF OAuth 2.x 関連 RFC の動き
+- WebAuthn Level 3 / CTAP 2.2 の標準化進捗
+- FIDO Credential Exchange Protocol（CXP / CXF）——パスキーのプロバイダー間移行
 
 **エコシステム**
 - EU EUDI Wallet の実装ロードマップ・各国状況
@@ -36,6 +38,7 @@
 - Passkeys / FIDO2 の普及状況・最新統計
 - Apple / Google / Microsoft のデジタルウォレット戦略
 - 日本のデジタルID動向（マイナンバーカード活用、行政API、民間連携）
+- 日本金融業界のパスキー必須化——証券口座乗っ取り事件と業界対応
 
 **セキュリティ**
 - AI エージェント時代の非人間アイデンティティ (NHI) 管理
@@ -51,6 +54,7 @@
 
 **規制・ガバナンス**
 - eIDAS 2.0 実施状況と各国対応
+- NIST SP 800-63-4 最終版——Synced Passkeys の AAL2 認定と影響
 - NIST SP 800 / NISTIR ガイドライン更新
 - OpenID Foundation ワーキンググループ活動
 

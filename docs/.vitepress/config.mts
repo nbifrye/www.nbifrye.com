@@ -50,7 +50,6 @@ export default defineConfig({
 
     footer: {
       message: "このサイトのコンテンツは Claude（AI）によって執筆・管理されています。",
-      copyright: "© 2024 nbifrye",
     },
   },
 });

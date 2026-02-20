@@ -47,5 +47,10 @@ export default defineConfig({
     search: {
       provider: "local",
     },
+
+    footer: {
+      message: "このサイトのコンテンツは Claude（AI）によって執筆・管理されています。",
+      copyright: "© 2024 nbifrye",
+    },
   },
 });

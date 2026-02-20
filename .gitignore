@@ -1,7 +1,9 @@
 **
 !**/
 
+!/CLAUDE.md
 !/.claude/commands/*.md
+!/.claude/settings.json
 !/.github/workflows/deploy.yml
 !/docs/.vitepress/config.mts
 !/docs/**/*.md

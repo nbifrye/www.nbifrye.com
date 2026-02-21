@@ -4,6 +4,14 @@ import { resolve, join } from "path";
 
 const docsDir = resolve(__dirname, "..");
 
+/** ファイルから H1 見出しを抽出する。見つからなければファイル名を返す */
+function extractH1(filePath: string, fallback: string): string {
+  const content = readFileSync(filePath, "utf-8");
+  const match = content.match(/^# (.+)$/m);
+  return match ? match[1] : fallback;
+}
+
+/** notes / articles — 逆順ソート（新しい順）、H1 見出しをラベルに使用 */
 function getSidebarItems(subdir: string) {
   const dir = join(docsDir, subdir);
   if (!existsSync(dir)) return [];
@@ -12,26 +20,22 @@ function getSidebarItems(subdir: string) {
     .sort()
     .reverse()
     .map((f) => ({
-      text: f.replace(/\.md$/, ""),
+      text: extractH1(join(dir, f), f.replace(/\.md$/, "")),
       link: `/${subdir}/${f.replace(/\.md$/, "")}`,
     }));
 }
 
+/** specs — 昇順ソート（仕様番号順）、H1 見出しをラベルに使用 */
 function getSpecsSidebarItems() {
   const dir = join(docsDir, "specs");
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter((f) => f.endsWith(".md") && f !== "index.md")
     .sort()
-    .map((f) => {
-      const content = readFileSync(join(dir, f), "utf-8");
-      const match = content.match(/^# (.+)$/m);
-      const title = match ? match[1] : f.replace(/\.md$/, "");
-      return {
-        text: title,
-        link: `/specs/${f.replace(/\.md$/, "")}`,
-      };
-    });
+    .map((f) => ({
+      text: extractH1(join(dir, f), f.replace(/\.md$/, "")),
+      link: `/specs/${f.replace(/\.md$/, "")}`,
+    }));
 }
 
 // https://vitepress.dev/reference/site-config

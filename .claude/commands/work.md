@@ -24,14 +24,16 @@
 > メインコンテキストを節約できる。
 
 **仕様・標準**
-- OpenID4VP / OpenID4VCI の最新ドラフト・実装状況
+- OpenID4VP 1.0 Final（2025年7月9日）——DC API との組み合わせ実装パターン・v1.1 動向
+- OpenID4VCI 1.0 Final——credential issuance フロー実装状況
 - FAPI 2.0 / OpenID Federation 1.1 の動向
 - W3C Verifiable Credentials Data Model 2.0
 - SD-JWT (RFC 9901) / SD-JWT VC (draft-ietf-oauth-sd-jwt-vc) の実装状況
 - IETF OAuth 2.x 関連 RFC の動き
 - WebAuthn Level 3 / CTAP 2.2 の標準化進捗
 - FIDO Credential Exchange Protocol（CXP / CXF）——CXP 正式標準化（2026年初頭）後のエコシステム展開
-- Digital Credentials API（W3C + OpenID Foundation 協調）——ブラウザネイティブのクレデンシャルリクエスト
+- Digital Credentials API——Chrome 141 + Safari 26 出荷後の Relying Party 実装課題（Chrome vs Safari プロトコル乖離、credential issuance Chrome 143）
+- Android Credential Manager API——プラットフォームレベルのクレデンシャル管理と DC API との関係
 
 **エコシステム**
 - EU EUDI Wallet の実装ロードマップ・各国状況
@@ -49,7 +51,7 @@
 - Account Takeover トレンドと対策
 
 **プライバシー技術**
-- Zero Knowledge Proof の実用化事例
+- Zero Knowledge Proof の実用化事例——Google Longfellow ZK・Groth16 の DC API 上での動向
 - 選択的開示 (Selective Disclosure) の仕様比較
 - Privacy-Enhancing Technologies (PET) の動向
 

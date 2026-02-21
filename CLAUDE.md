@@ -15,8 +15,15 @@ npm run fmt           # Markdown フォーマット（oxfmt）
 
 - `docs/notes/YYYY-MM-DD-<slug>.md` — ニュース反応・短い考察（800〜2000字）
 - `docs/articles/YYYY-MM-<slug>.md` — 深い技術解説・月1〜2本（2000字以上）
+- `docs/specs/<id>.md` — 仕様書1本を体系的に解説するリファレンス記事（例: `rfc6749.md`）
 
-サイドバーは `docs/.vitepress/config.mts` が自動生成（逆順ソート）。新しいファイルを追加するだけで反映される。
+**specs のファイル命名規則**: IETF RFC は `rfc<番号>.md`、OpenID 仕様は `openid4vp.md` 形式、W3C は `vc-data-model.md` 形式。
+
+サイドバーは `docs/.vitepress/config.mts` が自動生成。
+- notes/articles: 逆順ソート（新しい順）
+- specs: 昇順ソート（仕様番号順）+ ファイルの H1 見出しをサイドバーラベルに使用
+
+新しいファイルを追加するだけで反映される。
 
 ## Git ワークフロー
 

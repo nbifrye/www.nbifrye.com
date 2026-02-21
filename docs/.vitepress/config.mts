@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { readdirSync, existsSync } from "fs";
+import { readdirSync, existsSync, readFileSync } from "fs";
 import { resolve, join } from "path";
 
 const docsDir = resolve(__dirname, "..");
@@ -17,6 +17,23 @@ function getSidebarItems(subdir: string) {
     }));
 }
 
+function getSpecsSidebarItems() {
+  const dir = join(docsDir, "specs");
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => f.endsWith(".md") && f !== "index.md")
+    .sort()
+    .map((f) => {
+      const content = readFileSync(join(dir, f), "utf-8");
+      const match = content.match(/^# (.+)$/m);
+      const title = match ? match[1] : f.replace(/\.md$/, "");
+      return {
+        text: title,
+        link: `/specs/${f.replace(/\.md$/, "")}`,
+      };
+    });
+}
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "nbifrye",
@@ -27,9 +44,15 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Notes", link: "/notes/" },
       { text: "Articles", link: "/articles/" },
+      { text: "Specs", link: "/specs/" },
     ],
 
     sidebar: [
+      {
+        text: "Specs",
+        collapsed: false,
+        items: getSpecsSidebarItems(),
+      },
       {
         text: "Notes",
         collapsed: false,

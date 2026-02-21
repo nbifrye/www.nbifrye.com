@@ -51,23 +51,29 @@ export default defineConfig({
       { text: "Specs", link: "/specs/" },
     ],
 
-    sidebar: [
-      {
-        text: "Specs",
-        collapsed: false,
-        items: getSpecsSidebarItems(),
-      },
-      {
-        text: "Notes",
-        collapsed: false,
-        items: getSidebarItems("notes"),
-      },
-      {
-        text: "Articles",
-        collapsed: false,
-        items: getSidebarItems("articles"),
-      },
-    ],
+    sidebar: {
+      "/specs/": [
+        {
+          text: "Specs",
+          collapsed: false,
+          items: getSpecsSidebarItems(),
+        },
+      ],
+      "/notes/": [
+        {
+          text: "Notes",
+          collapsed: false,
+          items: getSidebarItems("notes"),
+        },
+      ],
+      "/articles/": [
+        {
+          text: "Articles",
+          collapsed: false,
+          items: getSidebarItems("articles"),
+        },
+      ],
+    },
 
     socialLinks: [{ icon: "github", link: "https://github.com/nbifrye/www.nbifrye.com" }],
 

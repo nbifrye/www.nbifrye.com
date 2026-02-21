@@ -30,7 +30,8 @@
 - SD-JWT (RFC 9901) / SD-JWT VC (draft-ietf-oauth-sd-jwt-vc) の実装状況
 - IETF OAuth 2.x 関連 RFC の動き
 - WebAuthn Level 3 / CTAP 2.2 の標準化進捗
-- FIDO Credential Exchange Protocol（CXP / CXF）——パスキーのプロバイダー間移行
+- FIDO Credential Exchange Protocol（CXP / CXF）——CXP 正式標準化（2026年初頭）後のエコシステム展開
+- Digital Credentials API（W3C + OpenID Foundation 協調）——ブラウザネイティブのクレデンシャルリクエスト
 
 **エコシステム**
 - EU EUDI Wallet の実装ロードマップ・各国状況
@@ -54,7 +55,8 @@
 
 **規制・ガバナンス**
 - eIDAS 2.0 実施状況と各国対応
-- NIST SP 800-63-4 最終版——Synced Passkeys の AAL2 認定と影響
+- NIST SP 800-63-4 最終版（2025年7月）——企業・政府機関への実装インパクトの深掘り
+- FIDO Alliance Passkey Index——採用統計の定期レポートと分析
 - NIST SP 800 / NISTIR ガイドライン更新
 - OpenID Foundation ワーキンググループ活動
 - HAIP (High Assurance Interoperability Profile) 1.0 と OpenID Foundation 適合テスト・自己認証プログラム

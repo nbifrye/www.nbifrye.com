@@ -28,16 +28,17 @@
 
 **仕様・標準**
 
-- OpenID4VP 1.0 Final（2025年7月）——DC API との組み合わせ実装パターン・v1.1 動向
-- OpenID4VCI 1.0 Final——credential issuance フロー実装状況
+- OpenID4VP 1.0 Final（2025年7月）——Spec 記事として体系的に解説する価値あり
+- OpenID4VCI 1.0 Final——credential issuance フロー・Wallet Attestation の詳細
+- DCQL（Digital Credentials Query Language）——OpenID4VP の新クエリ言語・HAIP での採用・Presentation Exchange との比較
 - FAPI 2.0 Security Profile 2.0 の実装状況
-- OpenID Federation 1.0 / 1.1——EUDI Wallet のトラスト基盤・各国実装状況
+- OpenID Federation 1.0——60日間パブリックレビュー完了（2025年12月）・Final 公開後のトラスト基盤への影響
 - W3C Verifiable Credentials Data Model 2.0
-- SD-JWT (RFC 9901) / SD-JWT VC (draft-ietf-oauth-sd-jwt-vc) の実装状況
+- SD-JWT VC（draft-ietf-oauth-sd-jwt-vc）——RFC 9901 との関係・HAIP での採用・実装状況（RFC 9901 Note 済み）
 - IETF OAuth 2.x 関連 RFC の動き
 - WebAuthn Level 3 / CTAP 2.2 の標準化進捗
-- FIDO CXP/CXF——正式標準化（2026年初頭）後のエコシステム展開
-- Digital Credentials API——Chrome 141 + Safari 26 出荷後の RP 実装課題
+- FIDO CXP/CXF——正式標準化（2026年初頭）後のエコシステム展開（Note 済み、続報待ち）
+- Digital Credentials API——RP 実装課題・OpenID4VP 組み合わせの実装詳細（Note 済み、深掘り余地あり）
 - Android Credential Manager API——プラットフォームレベルのクレデンシャル管理と DC API の関係
 
 **エコシステム**
@@ -65,10 +66,10 @@
 
 **規制・ガバナンス**
 
-- eIDAS 2.0 実施状況と各国対応
-- NIST SP 800-63-4 最終版（2025年7月）——実装インパクト
+- eIDAS 2.0 実施状況と各国対応——EU EUDI Wallet の法的義務化（2026年12月）と各国実装ロードマップ
+- NIST SP 800-63-4 最終版（2025年7月31日）——DIRM・PAD 必須化・mDL/VC 受け入れ・実装インパクト
 - FIDO Alliance Passkey Index——採用統計と分析
-- HAIP 1.0 と OpenID Foundation 適合テスト・自己認証プログラム
+- OpenID Foundation 適合性認定（Accreditation）サービス——Q2 2026 予定の第三者認定スキームの詳細
 
 ### Step 3: コンテンツ形式の選択
 

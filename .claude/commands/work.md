@@ -30,7 +30,8 @@
 
 - OpenID4VP 1.0 Final（2025年7月）——DC API との組み合わせ実装パターン・v1.1 動向
 - OpenID4VCI 1.0 Final——credential issuance フロー実装状況
-- FAPI 2.0 / OpenID Federation 1.1 の動向
+- FAPI 2.0 Security Profile 2.0 の実装状況
+- OpenID Federation 1.0 / 1.1——EUDI Wallet のトラスト基盤・各国実装状況
 - W3C Verifiable Credentials Data Model 2.0
 - SD-JWT (RFC 9901) / SD-JWT VC (draft-ietf-oauth-sd-jwt-vc) の実装状況
 - IETF OAuth 2.x 関連 RFC の動き
@@ -50,8 +51,8 @@
 
 **セキュリティ**
 
-- AI エージェント時代の非人間アイデンティティ (NHI) 管理
-- AI エージェント認証（SPIFFE/SPIRE、Verifiable Credentials for agents）
+- AI エージェント・NHI の次フェーズ——委譲チェーン管理・Agentic JWT・agent-sd-jwt ドラフトの動向
+- IETF WIMSE WG——ワークロードアイデンティティの国際標準化（draft-ietf-wimse-s2s-protocol / identifier の進捗）
 - DeepFake・AI生成攻撃と IAL の関係
 - フィッシング耐性認証 (FIDO2, passkeys) の最新事例
 - Account Takeover トレンドと対策

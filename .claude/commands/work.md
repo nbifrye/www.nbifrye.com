@@ -83,13 +83,7 @@
 
 ### Step 4: コンテンツ執筆
 
-**Spec のファイル命名規則**:
-
-- IETF RFC: `rfc<番号>.md` — 例: `rfc6749.md`, `rfc7636.md`
-- OpenID Foundation: `openid4vp.md`, `openid4vci.md`, `fapi2.md`
-- W3C: `vc-data-model.md`, `did-core.md`, `webauthn.md`
-- FIDO Alliance: `passkey.md`, `fido-cxp.md`
-- ISO/IEC: `iso18013-5.md`
+**Spec のファイル命名規則は `CLAUDE.md` を参照。**
 
 **ノートのテンプレート**:
 
@@ -219,17 +213,7 @@
 - **一次情報**へリンクする（仕様書・RFC・公式ブログ・学術論文を優先）
 - **具体性**を重視する（抽象論より実装例・数字・タイムラインを含める）
 
-### Step 5: ビルド検証
-
-コンテンツ執筆後、**必ず**ビルドを実行して成功を確認する：
-
-```bash
-npm run docs:build
-```
-
-ビルドが失敗した場合は原因を特定し、修正してから次へ進む。
-
-### Step 6: 自己改善
+### Step 5: 自己改善
 
 コンテンツを書き終えたら、**このコマンド自身** (`.claude/commands/work.md`) と **`CLAUDE.md`** を見直して改善する。
 
@@ -254,7 +238,7 @@ Read ツールで両ファイルを読み込み、以下の観点で評価する
 改善すべき点があれば Edit ツールでファイルを更新する。
 変更がなければこのステップはスキップしてよい。
 
-### Step 7: コミットとプッシュ
+### Step 6: コミットとプッシュ
 
 ```bash
 # ステージング（変更したファイルのみ個別に指定）

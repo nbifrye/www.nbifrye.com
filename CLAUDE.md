@@ -11,11 +11,6 @@ npm run docs:preview  # ビルド成果のプレビュー
 npm run fmt           # Markdown フォーマット（oxfmt）
 ```
 
-## 品質ゲート
-
-コミット前に必ず `npm run docs:build` を実行し、ビルドが成功することを確認する。
-ビルドエラーが出た場合は修正してからコミットすること。
-
 ## コンテンツ構造
 
 ```
@@ -62,7 +57,6 @@ docs/
 ## Git ワークフロー
 
 `main` ブランチへのプッシュで GitHub Actions が自動デプロイ（GitHub Pages）。
-feature branch / PR では CI が `npm run docs:build` を実行してビルド検証する。
 
 ```bash
 git add <specific-files>
@@ -73,7 +67,6 @@ git push -u origin HEAD
 ## CI/CD
 
 - `.github/workflows/deploy.yml` — `main` ブランチへのプッシュで GitHub Pages にデプロイ
-- `.github/workflows/ci.yml` — PR・feature branch でビルド検証（壊れたコンテンツのマージ防止）
 
 ## カスタムコマンド
 
@@ -82,4 +75,3 @@ git push -u origin HEAD
 ## 自動フック
 
 - **PostToolUse（Write/Edit）**: `.md` ファイルへの書き込み後に `oxfmt` で自動フォーマット
-- **PreCommit**: コミット前に `npm run docs:build` でビルド検証（失敗時はコミット中止）

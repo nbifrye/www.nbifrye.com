@@ -10,6 +10,16 @@
           }
         ]
       }
+    ],
+    "PreCommit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/user/www.nbifrye.com && npm run docs:build 2>&1"
+          }
+        ]
+      }
     ]
   }
 }

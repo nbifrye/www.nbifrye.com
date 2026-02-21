@@ -1,43 +1,47 @@
 # /work — 自律成長セッション
 
-デジタルアイデンティティのプロフェッショナルとして、今日の知識をアウトプットします。
-このコマンドを実行するたびに、最新動向を調査し、思考を記録していきます。
+デジタルアイデンティティのプロフェッショナルとして、今日の知識をアウトプットする。
+このコマンドを実行するたびに、最新動向を調査し、思考を記録していく。
 
-> プロジェクトの構造・コマンド・ワークフローは `CLAUDE.md` に記載されており、セッション開始時に自動ロードされる。
+> プロジェクトの構造・コマンド・ワークフローは `CLAUDE.md` に記載されている。
 
 ## 実行フロー
 
-### Step 1: 既存コンテンツの確認
+### Step 1: 現状把握
 
-以下を確認し、最近カバーしたトピックと重複しないよう把握する：
+以下を**並列で**確認し、最近カバーしたトピックと重複しないよう把握する：
 
-- `docs/notes/` のファイル一覧（Glob ツールを使用）
-- `docs/articles/` のファイル一覧（Glob ツールを使用）
-- `docs/specs/` のファイル一覧（Glob ツールを使用、未解説の仕様を把握する）
-- 最新の数件のファイルの冒頭を Read して内容を把握する
+- `docs/notes/` のファイル一覧（Glob）
+- `docs/articles/` のファイル一覧（Glob）
+- `docs/specs/` のファイル一覧（Glob）
+
+次に、最新 3〜5 件のファイルの冒頭を Read して内容を把握する。
 
 ### Step 2: トピック選定とリサーチ
 
-以下の観点から **今日フォーカスするトピックを1つ選び**、WebSearch で最新情報を3〜5件収集する。
+以下の候補リストから **今日フォーカスするトピックを1つ選び**、WebSearch で最新情報を 3〜5 件収集する。
 既存コンテンツと重複しない新鮮なテーマを優先すること。
 
-> **コンテキスト管理のヒント**: リサーチが広範になる場合は Task ツールでサブエージェントに委託すると、
-> メインコンテキストを節約できる。
+> **コンテキスト管理**: リサーチが広範になる場合は Task ツール（subagent_type=Explore または subagent_type=general-purpose）でサブエージェントに委託し、メインコンテキストを節約する。
+
+#### トピック候補
 
 **仕様・標準**
-- OpenID4VP 1.0 Final（2025年7月9日）——DC API との組み合わせ実装パターン・v1.1 動向
+
+- OpenID4VP 1.0 Final（2025年7月）——DC API との組み合わせ実装パターン・v1.1 動向
 - OpenID4VCI 1.0 Final——credential issuance フロー実装状況
 - FAPI 2.0 / OpenID Federation 1.1 の動向
 - W3C Verifiable Credentials Data Model 2.0
 - SD-JWT (RFC 9901) / SD-JWT VC (draft-ietf-oauth-sd-jwt-vc) の実装状況
 - IETF OAuth 2.x 関連 RFC の動き
 - WebAuthn Level 3 / CTAP 2.2 の標準化進捗
-- FIDO Credential Exchange Protocol（CXP / CXF）——CXP 正式標準化（2026年初頭）後のエコシステム展開
-- Digital Credentials API——Chrome 141 + Safari 26 出荷後の Relying Party 実装課題（Chrome vs Safari プロトコル乖離、credential issuance Chrome 143）
-- Android Credential Manager API——プラットフォームレベルのクレデンシャル管理と DC API との関係
+- FIDO CXP/CXF——正式標準化（2026年初頭）後のエコシステム展開
+- Digital Credentials API——Chrome 141 + Safari 26 出荷後の RP 実装課題
+- Android Credential Manager API——プラットフォームレベルのクレデンシャル管理と DC API の関係
 
 **エコシステム**
-- EU EUDI Wallet の実装ロードマップ・各国状況
+
+- EU EUDI Wallet 実装ロードマップ・各国状況
 - mDL (ISO 18013-5) の導入事例・技術詳細
 - Passkeys / FIDO2 の普及状況・最新統計
 - Apple / Google / Microsoft のデジタルウォレット戦略
@@ -45,48 +49,44 @@
 - 日本金融業界のパスキー必須化——証券口座乗っ取り事件と業界対応
 
 **セキュリティ**
+
 - AI エージェント時代の非人間アイデンティティ (NHI) 管理
 - AI エージェント認証（SPIFFE/SPIRE、Verifiable Credentials for agents）
-- DeepFake・AI生成攻撃と IAL (Identity Assurance Level) の関係
+- DeepFake・AI生成攻撃と IAL の関係
 - フィッシング耐性認証 (FIDO2, passkeys) の最新事例
 - Account Takeover トレンドと対策
 
 **プライバシー技術**
+
 - Zero Knowledge Proof の実用化事例——Google Longfellow ZK・Groth16 の DC API 上での動向
 - 選択的開示 (Selective Disclosure) の仕様比較
 - Privacy-Enhancing Technologies (PET) の動向
 
 **規制・ガバナンス**
+
 - eIDAS 2.0 実施状況と各国対応
-- NIST SP 800-63-4 最終版（2025年7月）——企業・政府機関への実装インパクトの深掘り
-- FIDO Alliance Passkey Index——採用統計の定期レポートと分析
-- NIST SP 800 / NISTIR ガイドライン更新
-- OpenID Foundation ワーキンググループ活動
-- HAIP (High Assurance Interoperability Profile) 1.0 と OpenID Foundation 適合テスト・自己認証プログラム
+- NIST SP 800-63-4 最終版（2025年7月）——実装インパクト
+- FIDO Alliance Passkey Index——採用統計と分析
+- HAIP 1.0 と OpenID Foundation 適合テスト・自己認証プログラム
 
-### Step 3: コンテンツ執筆
+### Step 3: コンテンツ形式の選択
 
-**形式の選択**:
-- **ノート** `docs/notes/YYYY-MM-DD-<slug>.md` — ニュース反応・気付き・短い考察（800〜2000字）
-- **仕様書解説** `docs/specs/<id>.md` — 仕様書1本を体系的に解説するリファレンス記事
+以下の基準で形式を**自律的に選択**する（頻度制限なし）：
 
-以下の基準でどちらかを**自律的に選択**する（頻度制限なし）：
-
-**仕様書解説を選ぶ場合**:
-- 選んだトピックが特定の RFC・標準・仕様書（OpenID4VP、WebAuthn、SD-JWT など）を中心としている
-- `docs/specs/` にまだ該当仕様のファイルが存在しない
-- 仕様の全体像・フロー・セキュリティ要件を体系的に整理することで高い参照価値が生まれる
-
-**ノートを選ぶ場合**:
-- トピックが最新ニュース・エコシステム動向・実装状況・業界観察など
-- 既存 spec ファイルが存在する仕様の「周辺動向」を扱う
-- 特定の仕様より広いテーマ（複数仕様の比較・規制動向・採用状況など）
+| 形式 | 選択基準 |
+|------|---------|
+| **Spec** (`docs/specs/<id>.md`) | 特定の RFC・標準仕様を中心とし、`docs/specs/` に該当ファイルが未存在。体系的整理で高い参照価値が出る場合 |
+| **Article** (`docs/articles/YYYY-MM-<slug>.md`) | 複数の仕様・技術を横断する比較分析、長期トレンド解説、アーキテクチャ論。2000字以上 |
+| **Note** (`docs/notes/YYYY-MM-DD-<slug>.md`) | 最新ニュース・エコシステム動向・実装状況・業界観察。800〜2000字 |
 
 今日の日付はシステムコンテキスト（`currentDate`）で確認してから、正しいファイル名を付けること。
 
-**仕様書解説のファイル命名規則**:
+### Step 4: コンテンツ執筆
+
+**Spec のファイル命名規則**:
+
 - IETF RFC: `rfc<番号>.md` — 例: `rfc6749.md`, `rfc7636.md`
-- OpenID Foundation: `oidc-core.md`, `openid4vp.md`, `openid4vci.md`, `fapi2.md`
+- OpenID Foundation: `openid4vp.md`, `openid4vci.md`, `fapi2.md`
 - W3C: `vc-data-model.md`, `did-core.md`, `webauthn.md`
 - FIDO Alliance: `passkey.md`, `fido-cxp.md`
 - ISO/IEC: `iso18013-5.md`
@@ -113,6 +113,38 @@
 ## 参考
 
 - [リンクテキスト](URL)
+- [リンクテキスト](URL)
+```
+
+**記事のテンプレート**:
+
+```markdown
+# [タイトル]
+
+> [一言サマリー]
+
+## はじめに
+
+[この記事が何を論じるか。読者が得られる価値。]
+
+## [セクション1: 背景・問題提起]
+
+[...]
+
+## [セクション2: 技術分析・比較]
+
+[...]
+
+## [セクション3: 実装・事例]
+
+[...]
+
+## まとめと展望
+
+[結論・今後の方向性・読者へのアクション提案。]
+
+## 参考
+
 - [リンクテキスト](URL)
 ```
 
@@ -181,48 +213,63 @@
 ```
 
 **執筆基準**:
+
 - **日本語**で書く（技術用語・固有名詞・仕様名は英語のまま可）
 - **自分の視点・考察**を必ず入れる（要約サイトではなく、プロとしての解釈）
 - **一次情報**へリンクする（仕様書・RFC・公式ブログ・学術論文を優先）
 - **具体性**を重視する（抽象論より実装例・数字・タイムラインを含める）
 
-### Step 4: コマンド自己改善
+### Step 5: ビルド検証
+
+コンテンツ執筆後、**必ず**ビルドを実行して成功を確認する：
+
+```bash
+npm run docs:build
+```
+
+ビルドが失敗した場合は原因を特定し、修正してから次へ進む。
+
+### Step 6: 自己改善
 
 コンテンツを書き終えたら、**このコマンド自身** (`.claude/commands/work.md`) と **`CLAUDE.md`** を見直して改善する。
 
 Read ツールで両ファイルを読み込み、以下の観点で評価する：
 
-**`.claude/commands/work.md` のトピックリスト更新**
-- 今回リサーチした中で、候補リストにまだ載っていない重要トピックはあるか？
+**トピックリスト更新**
+
+- 今回のリサーチで、候補リストにまだ載っていない重要トピックはあるか？
 - 古くなった・旬を過ぎたトピックがあれば削除または更新する
 - 新たに浮上した仕様・規格・業界動向をリストに追加する
 
 **実行プロセスの改善**
+
 - 今回の実行で手順が不明瞭だった箇所はあるか？
 - より良い執筆フロー・調査方法があれば指示を更新する
 - テンプレートや執筆基準に改善余地はあるか？
 
 **`CLAUDE.md` の更新**
+
 - プロジェクト構造やワークフローに変更があれば `CLAUDE.md` を更新する
 
 改善すべき点があれば Edit ツールでファイルを更新する。
 変更がなければこのステップはスキップしてよい。
 
-### Step 5: コミットとプッシュ
+### Step 7: コミットとプッシュ
 
 ```bash
 # ステージング（変更したファイルのみ個別に指定）
 git add docs/notes/<filename>.md          # 新規ノート
-git add docs/specs/<filename>.md         # 新規仕様書解説
-git add docs/.vitepress/config.mts       # サイドバー設定を変更した場合
+git add docs/articles/<filename>.md       # 新規記事
+git add docs/specs/<filename>.md          # 新規仕様書解説
 git add .claude/commands/work.md          # コマンドを更新した場合
 git add CLAUDE.md                         # CLAUDE.md を更新した場合
 
 # コミット（日本語メッセージ推奨）
 git commit -m "Add note: [タイトル]"
 # または
+git commit -m "Add article: [タイトル]"
 git commit -m "Add spec: [仕様名] — [正式タイトル]"
-# コマンドも更新した場合：
+# 複数更新の場合：
 git commit -m "Add note: [タイトル] + /work コマンド改善"
 
 # プッシュ（現在のブランチへ）
@@ -231,5 +278,5 @@ git push -u origin HEAD
 
 ---
 
-*このコマンドは毎回実行するたびに新しいコンテンツを生み出し、自らも進化します。
-`main` ブランチ上で実行すれば、GitHub Actions 経由で自動デプロイされます。*
+*このコマンドは毎回実行するたびに新しいコンテンツを生み出し、自らも進化する。
+`main` ブランチ上で実行すれば、GitHub Actions 経由で自動デプロイされる。*

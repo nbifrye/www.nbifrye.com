@@ -49,6 +49,13 @@
 - 日本のデジタルID動向（マイナンバーカード活用、行政API、民間連携）
 - 日本金融業界のパスキー必須化——証券口座乗っ取り事件と業界対応
 
+**エンタープライズ ID セキュリティ**
+
+- IPSIE（Interoperability Profile for Secure Identity in the Enterprise）——OpenID Foundation WG 進捗・相互運用テストイベント（Article 済み）
+- Shared Signals Framework (SSF) / CAEP——エンタープライズ向け継続的アクセス評価の実装詳細
+- OpenID Provider Commands——IdP からアプリへの強制セッション終了コマンドプロトコル
+- FAPI 2.0 Security Profile 2.0 の実装状況
+
 **セキュリティ**
 
 - AI エージェント・NHI の次フェーズ——委譲チェーン管理・Agentic JWT・agent-sd-jwt ドラフトの動向

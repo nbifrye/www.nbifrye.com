@@ -11,7 +11,7 @@ function extractH1(filePath: string, fallback: string): string {
   return match ? match[1] : fallback;
 }
 
-/** notes / articles — 逆順ソート（新しい順）、H1 見出しをラベルに使用 */
+/** articles — 逆順ソート（新しい順）、H1 見出しをラベルに使用 */
 function getSidebarItems(subdir: string) {
   const dir = join(docsDir, subdir);
   if (!existsSync(dir)) return [];
@@ -46,7 +46,6 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Notes", link: "/notes/" },
       { text: "Articles", link: "/articles/" },
       { text: "Specs", link: "/specs/" },
     ],
@@ -57,13 +56,6 @@ export default defineConfig({
           text: "Specs",
           collapsed: false,
           items: getSpecsSidebarItems(),
-        },
-      ],
-      "/notes/": [
-        {
-          text: "Notes",
-          collapsed: false,
-          items: getSidebarItems("notes"),
         },
       ],
       "/articles/": [

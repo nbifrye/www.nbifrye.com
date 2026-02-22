@@ -16,24 +16,28 @@
 
 ### Step 2: トピック選定とリサーチ
 
-以下の候補リストから **今日フォーカスするトピックを1つ選び**、WebSearch で最新情報を 3〜5 件収集する。
+以下の候補リストから **今日フォーカスするトピックを1つ選び**、WebSearch で最新情報を収集する。
 既存コンテンツと重複しない新鮮なテーマを優先すること。
 
-> **必須 — コンテキスト節約**: WebSearch・情報収集は必ず Task ツール（`subagent_type=general-purpose`）でサブエージェントに委託する。調査結果の**要点サマリー**のみメインコンテキストで受け取ること。生の検索結果をメインコンテキストに読み込まない。
+> **必須 — コンテキスト節約**: WebSearch・情報収集は必ず Task ツール（`subagent_type=general-purpose`）でサブエージェントに委託する。
+>
+> **サブエージェントへの指示ルール（トークン節約の要）**:
+> 1. 調査観点は **5項目以内** に絞る（多いほどエージェント出力が肥大化する）
+> 2. プロンプトの末尾に必ず追記する: 「**最終回答のみ返すこと。プレーンテキストの箇条書きで600文字以内にまとめること。表・コードブロック・URLリストは不要**」
+> 3. サブエージェントの完了通知（`status: completed`）を受け取るまで **執筆（Write/Edit）を開始しない**。途中で出力ファイルを読んで先行執筆すると研究結果との乖離が生じ、追加コミットが必要になる
+> 4. Step 1 と並列でOKな作業: 既存 Spec/Article ファイルの Read（フォーマット確認等）。ただしテンプレートはこのコマンドに完全記載済みのため **既存コンテンツの全文 Read は原則不要**
 
 #### トピック候補
 
 **仕様・標準**
 
 - OpenID4VP 1.0 Final——Spec 記事として体系的に解説（フロー全体・クライアント認証・JAR/JARM・wallet_nonce 等）（Spec 済み）
-- OpenID4VCI 1.0 Final——credential issuance フロー・Wallet Attestation の詳細（Spec 記事として体系的に解説）
-- OpenID Federation 1.0——トラストチェーン・Subordinate Statement・Entity Configuration の詳細（Spec 記事）
-- FAPI 2.0 Security Profile 2.0 の実装状況
-- OpenID Federation 1.0——60日間パブリックレビュー完了（2025年12月）・Final 公開後のトラスト基盤への影響
+- OpenID4VCI 1.0 Final——credential issuance フロー・Wallet Attestation の詳細（Spec 記事として体系的に解説）（Spec 済み）
+- OpenID Federation 1.0——トラストチェーン・Subordinate Statement・Entity Configuration の詳細（Spec 記事）。2025年12月パブリックレビュー完了、Final 近い
+- FAPI 2.0 Security Profile 2.0——Authorization Code Flow + PAR + DPoP の組み合わせ・実装プロファイルとしての要件定義（Spec 記事）
 - W3C Verifiable Credentials Data Model 2.0
-- SD-JWT VC（draft-ietf-oauth-sd-jwt-vc）——RFC 9901 との関係・HAIP での採用・実装状況（RFC 9901 Note 済み）
-- IETF OAuth 2.x 関連 RFC の動き
-- WebAuthn Level 3 / CTAP 2.2 の標準化進捗
+- SD-JWT VC（RFC 9901）——フォーマット詳細・HAIP での採用・mdoc との比較（Spec 記事、RFC 9901 Note 済み）
+- WebAuthn Level 3 / CTAP 2.2 の標準化進捗（Spec 記事）
 - FIDO CXP/CXF——正式標準化（2026年初頭）後のエコシステム展開（Note 済み、続報待ち）
 - Digital Credentials API——RP 実装課題・OpenID4VP 組み合わせの実装詳細（Note 済み、深掘り余地あり）
 - Android Credential Manager API——プラットフォームレベルのクレデンシャル管理と DC API の関係
@@ -54,7 +58,6 @@
 - IPSIE（Interoperability Profile for Secure Identity in the Enterprise）——OpenID Foundation WG 進捗・相互運用テストイベント（Article 済み）
 - Shared Signals Framework (SSF) / CAEP——エンタープライズ向け継続的アクセス評価の実装詳細
 - OpenID Provider Commands——IdP からアプリへの強制セッション終了コマンドプロトコル
-- FAPI 2.0 Security Profile 2.0 の実装状況
 
 **セキュリティ**
 
@@ -88,6 +91,8 @@
 | **Article** (`docs/articles/YYYY-MM-DD-<slug>.md`) | ニュース反応・考察・比較分析・長期トレンド解説。最新動向から深い技術解説まで幅広く対応 |
 
 今日の日付はシステムコンテキスト（`currentDate`）で確認してから、正しいファイル名を付けること。
+
+> テンプレートは Step 4 に完全記載済み。既存の Spec/Article ファイルを Read してフォーマット確認する必要はない。
 
 ### Step 4: コンテンツ執筆
 
@@ -223,6 +228,8 @@
 
 ### Step 6: コミットとプッシュ
 
+**コミットは1回にまとめる**（記事執筆・自己改善・トピックリスト更新をすべて完了してからまとめてステージング）。途中でコミットすると後から追加コミットが必要になり、履歴が散らかる。
+
 ```bash
 # ステージング（変更したファイルのみ個別に指定）
 git add docs/articles/<filename>.md       # 新規記事
@@ -234,7 +241,7 @@ git add CLAUDE.md                         # CLAUDE.md を更新した場合
 git commit -m "Add article: [タイトル]"
 git commit -m "Add spec: [仕様名] — [正式タイトル]"
 # 複数更新の場合：
-git commit -m "Add article: [タイトル] + /work コマンド改善"
+git commit -m "Add spec: [仕様名] + /work コマンド改善"
 
 # プッシュ（現在のブランチへ）
 git push -u origin HEAD

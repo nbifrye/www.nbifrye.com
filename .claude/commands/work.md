@@ -33,7 +33,7 @@
 
 - OpenID4VP 1.0 Final——Spec 記事として体系的に解説（フロー全体・クライアント認証・JAR/JARM・wallet_nonce 等）（Spec 済み）
 - OpenID4VCI 1.0 Final——credential issuance フロー・Wallet Attestation の詳細（Spec 記事として体系的に解説）（Spec 済み）
-- OpenID Federation 1.0——トラストチェーン・Subordinate Statement・Entity Configuration の詳細（Spec 記事）。2025年12月パブリックレビュー完了、Final 近い
+- OpenID Federation 1.0——トラストチェーン・Subordinate Statement・Entity Configuration の詳細（Spec 記事）。2025年12月パブリックレビュー完了、Final 近い（Spec 済み）
 - FAPI 2.0 Security Profile 2.0——Authorization Code Flow + PAR + DPoP の組み合わせ・実装プロファイルとしての要件定義（Spec 記事）
 - W3C Verifiable Credentials Data Model 2.0
 - SD-JWT VC（RFC 9901）——フォーマット詳細・HAIP での採用・mdoc との比較（Spec 記事、RFC 9901 Note 済み）

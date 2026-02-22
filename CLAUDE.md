@@ -18,8 +18,7 @@ docs/
 ├── index.md                          # トップページ（hero + About）
 ├── articles/
 │   ├── index.md                      # Articles セクション索引
-│   ├── YYYY-MM-DD-<slug>.md          # ニュース反応・短い考察
-│   └── YYYY-MM-<slug>.md             # 深い技術解説・比較分析
+│   └── YYYY-MM-DD-<slug>.md          # 記事（短い考察〜深い技術解説）
 └── specs/
     ├── index.md                      # Specs セクション索引
     └── <id>.md                       # 仕様書1本を体系的に解説するリファレンス記事
@@ -29,8 +28,7 @@ docs/
 
 | 種別 | ファイル名 | 用途 |
 |------|-----------|------|
-| **Article（短）** | `YYYY-MM-DD-<slug>.md` | ニュース反応・トレンド考察・短い技術メモ |
-| **Article（長）** | `YYYY-MM-<slug>.md` | 複数の仕様を横断する深い技術解説・比較分析 |
+| **Article** | `YYYY-MM-DD-<slug>.md` | ニュース反応・考察・技術解説・比較分析 |
 | **Spec** | `<id>.md` | 仕様書1本を体系的に解説するリファレンス |
 
 ### Spec のファイル命名規則

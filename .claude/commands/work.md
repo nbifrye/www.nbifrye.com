@@ -28,9 +28,8 @@
 
 **仕様・標準**
 
-- OpenID4VP 1.0 Final（2025年7月）——Spec 記事として体系的に解説する価値あり
+- OpenID4VP 1.0 Final——Spec 記事として体系的に解説（フロー全体・クライアント認証・JAR/JARM・wallet_nonce 等）
 - OpenID4VCI 1.0 Final——credential issuance フロー・Wallet Attestation の詳細
-- DCQL（Digital Credentials Query Language）——OpenID4VP の新クエリ言語・HAIP での採用・Presentation Exchange との比較
 - FAPI 2.0 Security Profile 2.0 の実装状況
 - OpenID Federation 1.0——60日間パブリックレビュー完了（2025年12月）・Final 公開後のトラスト基盤への影響
 - W3C Verifiable Credentials Data Model 2.0
@@ -69,7 +68,8 @@
 - eIDAS 2.0 実施状況と各国対応——EU EUDI Wallet の法的義務化（2026年12月）と各国実装ロードマップ
 - NIST SP 800-63-4 最終版（2025年7月31日）——DIRM・PAD 必須化・mDL/VC 受け入れ・実装インパクト
 - FIDO Alliance Passkey Index——採用統計と分析
-- OpenID Foundation 適合性認定（Accreditation）サービス——Q2 2026 予定の第三者認定スキームの詳細
+- OpenWallet Foundation ライブラリ群——DCQL TypeScript・OpenID4VC TS・OpenID Federation TS の採用状況と DIDComm への展開
+- DIF Presentation Exchange の現状——DCQL 移行後の PE の位置づけ・既存実装への影響・残存する使われ方
 
 ### Step 3: コンテンツ形式の選択
 

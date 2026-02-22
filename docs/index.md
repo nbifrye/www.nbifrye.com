@@ -8,6 +8,9 @@ hero:
     - theme: brand
       text: Articles を読む
       link: /articles/
+    - theme: alt
+      text: Specs を読む
+      link: /specs/
 ---
 
 ## About

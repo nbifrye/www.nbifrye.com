@@ -380,9 +380,13 @@ Authorization Code Flow で `issuer_state` を Authorization Request に含め�
 - **Authlete**: SaaS 型 Authorization Server として OpenID4VCI をフルサポート
 - **Walt.id**: Enterprise Grade のオープンソース実装。Wallet SDK と合わせて提供
 - **MATTR**: エンタープライズ向け Platform にて商用提供
+- **Keycloak**: 2026 年 1 月、OpenID4VCI 対応の Credential Issuer として設定する公式ガイドを公開
+- **EBSI**: 欧州ブロックチェーンサービスインフラが OpenID4VCI 準拠の発行フローをサポート
 
-**相互運用テスト**
-2025 年の OIDF 相互運用テストイベントで Authorization Code Flow・Pre-Authorized Code Flow の両方にわたる相互運用性が検証済み。
+**相互運用テスト・自己認証プログラム**
+2025 年 11 月の OIDF リモート相互運用テストイベントで Authorization Code Flow・Pre-Authorized Code Flow の両方にわたる相互運用性が検証済み。HAIP 1.0 も高い合格率を達成した。
+
+2026 年 2 月 26 日より OIDF は OpenID4VCI 1.0・OpenID4VP 1.0・HAIP 1.0 の **自己認証プログラム**を開始する。現在 38 の法域でこれらの仕様が政策・技術フレームワークに採用・参照されており、認証プログラムはエコシステム全体の品質底上げと相互運用性の担保を目的とする。
 
 ---
 

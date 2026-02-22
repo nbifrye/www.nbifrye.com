@@ -243,6 +243,8 @@ Wallet は VP を生成する際に、Verifier の `nonce` と `client_id` を V
 - Wallet は未知の `type` を検出した場合はエラーを返さなければならない
 - Wallet は Transaction Data を Holder の確認画面に表示する義務がある
 
+SD-JWT VC の場合、Wallet は Transaction Data のハッシュ値（`transaction_data_hashes`）を **Key Binding JWT（KB-JWT）** に含めることで、クレデンシャルの提示と特定のトランザクション内容を cryptographic に束縛する。これにより、決済や電子署名（QES）のユースケースで「何に同意してクレデンシャルを提示したか」が検証可能になる。
+
 ---
 
 ## Digital Credentials API との統合

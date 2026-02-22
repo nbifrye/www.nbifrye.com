@@ -16,12 +16,10 @@ npm run fmt           # Markdown フォーマット（oxfmt）
 ```
 docs/
 ├── index.md                          # トップページ（hero + About）
-├── notes/
-│   ├── index.md                      # Notes セクション索引
-│   └── YYYY-MM-DD-<slug>.md          # ニュース反応・短い考察（800〜2000字）
 ├── articles/
 │   ├── index.md                      # Articles セクション索引
-│   └── YYYY-MM-<slug>.md            # 深い技術解説（2000字以上）
+│   ├── YYYY-MM-DD-<slug>.md          # ニュース反応・短い考察
+│   └── YYYY-MM-<slug>.md             # 深い技術解説・比較分析
 └── specs/
     ├── index.md                      # Specs セクション索引
     └── <id>.md                       # 仕様書1本を体系的に解説するリファレンス記事
@@ -29,11 +27,11 @@ docs/
 
 ### コンテンツ種別の使い分け
 
-| 種別 | ファイル名 | 目安字数 | 用途 |
-|------|-----------|---------|------|
-| **Note** | `YYYY-MM-DD-<slug>.md` | 800〜2000字 | ニュース反応・トレンド考察・短い技術メモ |
-| **Article** | `YYYY-MM-<slug>.md` | 2000字以上 | 複数の仕様を横断する深い技術解説・比較分析 |
-| **Spec** | `<id>.md` | 制限なし | 仕様書1本を体系的に解説するリファレンス |
+| 種別 | ファイル名 | 用途 |
+|------|-----------|------|
+| **Article（短）** | `YYYY-MM-DD-<slug>.md` | ニュース反応・トレンド考察・短い技術メモ |
+| **Article（長）** | `YYYY-MM-<slug>.md` | 複数の仕様を横断する深い技術解説・比較分析 |
+| **Spec** | `<id>.md` | 仕様書1本を体系的に解説するリファレンス |
 
 ### Spec のファイル命名規則
 
@@ -49,7 +47,7 @@ docs/
 
 `docs/.vitepress/config.mts` がビルド時にファイルシステムから自動生成する。
 
-- **notes / articles**: 逆順ソート（新しい順）+ ファイルの H1 見出しをサイドバーラベルに使用
+- **articles**: 逆順ソート（新しい順）+ ファイルの H1 見出しをサイドバーラベルに使用
 - **specs**: 昇順ソート（仕様番号順）+ ファイルの H1 見出しをサイドバーラベルに使用
 
 新しいファイルを追加するだけで反映される。`config.mts` の手動編集は不要。
@@ -60,7 +58,7 @@ docs/
 
 ```bash
 git add <specific-files>
-git commit -m "Add note: タイトル"   # または "Add article: タイトル" / "Add spec: タイトル"
+git commit -m "Add article: タイトル"   # または "Add spec: タイトル"
 git push -u origin HEAD
 ```
 

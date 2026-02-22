@@ -6,9 +6,6 @@ hero:
   tagline: "ID 標準・技術・エコシステムの記録と考察"
   actions:
     - theme: brand
-      text: Notes を読む
-      link: /notes/
-    - theme: alt
       text: Articles を読む
       link: /articles/
 ---

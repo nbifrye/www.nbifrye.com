@@ -1,7 +1,9 @@
 **
 !**/
 
+!/AGENTS.md
 !/CLAUDE.md
+!/.agents/skills/*/SKILL.md
 !/.claude/commands/*.md
 !/.claude/settings.json
 !/.github/workflows/*.yml

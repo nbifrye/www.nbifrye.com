@@ -71,14 +71,12 @@ git push -u origin HEAD
 - **一次情報**へリンクする（仕様書・RFC・公式ブログ・学術論文を優先）
 - **具体性**を重視する（抽象論より実装例・数字・タイムラインを含める）
 
+## Markdown フォーマット
+
+`.md` ファイルを作成・編集した後は必ず `npm run fmt` を実行してフォーマットを整える。
+
 ## スキル
 
-スキルの定義は `.agents/skills/` に集約されており、Claude Code 以外のエージェントとも共有される。
+利用可能なスキルは `.agents/skills/` に定義されている。
 
-- `/work` — `.agents/skills/work/SKILL.md` にワークフローを定義。デジタルアイデンティティの知識を体系化する自律ワークフロー。
-
-`.claude/commands/work.md` は Claude Code 向けの実行最適化メモ（サブエージェント活用など）を追記した拡張版。
-
-## 自動フック
-
-- **PostToolUse（Write/Edit）**: `.md` ファイルへの書き込み後に `oxfmt` で自動フォーマット
+- `/work` — `.agents/skills/work/SKILL.md` 参照。デジタルアイデンティティの知識を体系化する自律ワークフロー。

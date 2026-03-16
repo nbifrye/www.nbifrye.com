@@ -73,8 +73,5 @@ export default defineConfig({
       provider: "local",
     },
 
-    footer: {
-      message: "このサイトのコンテンツは Claude（AI）によって執筆・管理されています。",
-    },
   },
 });

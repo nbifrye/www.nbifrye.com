@@ -59,3 +59,4 @@
 ## 執筆済み章
 
 - [第1章 IAMとは何か](/bok/01-iam-what-is-it)
+- [第2章 デジタルアイデンティティの基本用語](/bok/02-digital-identity-terms)

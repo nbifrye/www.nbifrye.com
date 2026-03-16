@@ -11,9 +11,6 @@ hero:
     - theme: alt
       text: Specs を読む
       link: /specs/
-    - theme: alt
-      text: BoK を読む
-      link: /bok/
 ---
 
 ## About

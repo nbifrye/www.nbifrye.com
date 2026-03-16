@@ -38,19 +38,6 @@ function getSpecsSidebarItems() {
     }));
 }
 
-/** bok — 昇順ソート、H1 見出しをラベルに使用 */
-function getBokSidebarItems() {
-  const dir = join(docsDir, "bok");
-  if (!existsSync(dir)) return [];
-  return readdirSync(dir)
-    .filter((f) => f.endsWith(".md"))
-    .sort()
-    .map((f) => ({
-      text: extractH1(join(dir, f), f.replace(/\.md$/, "")),
-      link: f === "index.md" ? "/bok/" : `/bok/${f.replace(/\.md$/, "")}`,
-    }));
-}
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "nbifrye",
@@ -61,7 +48,6 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Articles", link: "/articles/" },
       { text: "Specs", link: "/specs/" },
-      { text: "BoK", link: "/bok/" },
     ],
 
     sidebar: {
@@ -77,13 +63,6 @@ export default defineConfig({
           text: "Articles",
           collapsed: false,
           items: getSidebarItems("articles"),
-        },
-      ],
-      "/bok/": [
-        {
-          text: "BoK",
-          collapsed: false,
-          items: getBokSidebarItems(),
         },
       ],
     },

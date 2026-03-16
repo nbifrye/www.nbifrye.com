@@ -2,12 +2,14 @@
 
 デジタルアイデンティティ分野の主要な仕様書を、仕様ごとに体系的に解説します。
 
+> **Note:** このセクションのコンテンツは、AI 生成の内容を含みます。内容の正確性は一次情報（仕様書・公式資料）とあわせて確認してください。
+
 RFC・OpenID Foundation・W3C・FIDO Alliance などの仕様を、背景・設計思想・技術詳細・後継仕様まで一本の記事で読めるようにまとめています。
 
-| 組織 | 例 |
-|------|-----|
-| **IETF** | RFC 6749 (OAuth 2.0), RFC 7636 (PKCE), RFC 9068 (JWT Access Token) |
-| **OpenID Foundation** | OpenID Connect Core, FAPI 2.0, OpenID4VP, OpenID4VCI |
-| **W3C** | Verifiable Credentials Data Model, DID Core |
-| **FIDO Alliance** | FIDO2 / WebAuthn, Passkey |
-| **ISO/IEC** | ISO 18013-5 (mDL) |
+| 組織                  | 例                                                                 |
+| --------------------- | ------------------------------------------------------------------ |
+| **IETF**              | RFC 6749 (OAuth 2.0), RFC 7636 (PKCE), RFC 9068 (JWT Access Token) |
+| **OpenID Foundation** | OpenID Connect Core, FAPI 2.0, OpenID4VP, OpenID4VCI               |
+| **W3C**               | Verifiable Credentials Data Model, DID Core                        |
+| **FIDO Alliance**     | FIDO2 / WebAuthn, Passkey                                          |
+| **ISO/IEC**           | ISO 18013-5 (mDL)                                                  |

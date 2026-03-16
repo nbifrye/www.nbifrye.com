@@ -16,13 +16,13 @@ Digital Credentials API は W3C の **Federated Identity Working Group（FedID W
 
 **主要マイルストーン（2025年）:**
 
-| 日付 | 出来事 |
-|------|--------|
-| 2025年2月 | W3C Council が仕様の Recommendation Track 掲載を決定（プライバシーに関する formal objection を退けつつ、WG に Privacy 対策の強化を指示） |
-| 2025年4月 | WICG → W3C FedID WG へ移管 |
-| 2025年7月1日 | First Public Working Draft 発行 |
-| 2025年9月17日 | Working Draft 更新 |
-| 2025年11月 | WG が仕様方針を合意：レジストリを廃止し、**OpenID4VP 1.0・OpenID4VCI・ISO/IEC 18013-7 Annex C** を normative reference として組み込む |
+| 日付          | 出来事                                                                                                                                   |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 2025年2月     | W3C Council が仕様の Recommendation Track 掲載を決定（プライバシーに関する formal objection を退けつつ、WG に Privacy 対策の強化を指示） |
+| 2025年4月     | WICG → W3C FedID WG へ移管                                                                                                               |
+| 2025年7月1日  | First Public Working Draft 発行                                                                                                          |
+| 2025年9月17日 | Working Draft 更新                                                                                                                       |
+| 2025年11月    | WG が仕様方針を合意：レジストリを廃止し、**OpenID4VP 1.0・OpenID4VCI・ISO/IEC 18013-7 Annex C** を normative reference として組み込む    |
 
 仕様は2026〜2027年に Candidate Recommendation へ進む見通しで、EU EUDI Wallet の展開タイムラインとも重なる。
 
@@ -31,23 +31,36 @@ Digital Credentials API は W3C の **Federated Identity Working Group（FedID W
 API の形はシンプルだ。既存の [Credential Management API](https://www.w3.org/TR/credential-management-1/) に `digital` メンバーを追加する設計で、既存の Web 認証基盤と統合される。
 
 **提示（Presentation）:**
+
 ```javascript
 const credential = await navigator.credentials.get({
   digital: {
-    requests: [{
-      protocol: "openid4vp",
-      data: { /* OpenID4VP リクエスト */ }
-    }]
-  }
+    requests: [
+      {
+        protocol: "openid4vp",
+        data: {
+          /* OpenID4VP リクエスト */
+        },
+      },
+    ],
+  },
 });
 ```
 
 **発行（Issuance）— Chrome 143 Origin Trial:**
+
 ```javascript
 await navigator.credentials.create({
   digital: {
-    requests: [{ protocol: "openid4vci", data: { /* OID4VCI リクエスト */ } }]
-  }
+    requests: [
+      {
+        protocol: "openid4vci",
+        data: {
+          /* OID4VCI リクエスト */
+        },
+      },
+    ],
+  },
 });
 ```
 
@@ -55,11 +68,11 @@ await navigator.credentials.create({
 
 ## ブラウザ実装状況
 
-| ブラウザ | 対応状況 | バージョン | 対応プロトコル |
-|---------|---------|-----------|--------------|
-| **Chrome** | ✅ 出荷済み | Chrome 141（2025年9月30日） | OpenID4VP + ISO 18013-7 Annex C |
-| **Safari** | ✅ 出荷済み | Safari 26（2025年9月15日） | `org-iso-mdoc`（mdoc のみ） |
-| **Firefox** | ❌ 未対応 | — | —（プライバシー懸念を表明） |
+| ブラウザ    | 対応状況    | バージョン                  | 対応プロトコル                  |
+| ----------- | ----------- | --------------------------- | ------------------------------- |
+| **Chrome**  | ✅ 出荷済み | Chrome 141（2025年9月30日） | OpenID4VP + ISO 18013-7 Annex C |
+| **Safari**  | ✅ 出荷済み | Safari 26（2025年9月15日）  | `org-iso-mdoc`（mdoc のみ）     |
+| **Firefox** | ❌ 未対応   | —                           | —（プライバシー懸念を表明）     |
 
 Chrome はプロトコル非依存設計（OpenID4VP も mdoc も対応）。Safari は ISO/IEC 18013-7 Annex C のみをサポートし、OpenID4VP は対応しない。
 

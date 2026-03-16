@@ -12,11 +12,11 @@ OAuth 2.0 も FIDO2 も、実装がバラバラなまま「準拠」を自称す
 
 2026年2月26日から開始される**自己認証（Self-Certification）**プログラムの対象は次の3仕様。
 
-| 仕様 | ステータス | 認証対象ロール |
-|------|-----------|----------------|
-| OpenID4VP 1.0 | Final（2025年7月） | Wallet、Verifier |
-| OpenID4VCI 1.0 | Final（2025年7月） | Issuer、Wallet |
-| HAIP 1.0 | Final（2025年12月） | Issuer、Wallet、Verifier |
+| 仕様           | ステータス          | 認証対象ロール           |
+| -------------- | ------------------- | ------------------------ |
+| OpenID4VP 1.0  | Final（2025年7月）  | Wallet、Verifier         |
+| OpenID4VCI 1.0 | Final（2025年7月）  | Issuer、Wallet           |
+| HAIP 1.0       | Final（2025年12月） | Issuer、Wallet、Verifier |
 
 プログラムの仕組みはシンプルだ。OpenID Foundation が提供するオープンソースの適合性スイートを使って実装をテストし、その結果ログを提出する。審査を経て合格が認められれば、Foundation の Web サイトに公開される。コストは**無料**（開発・テスト環境利用時）で、認証書発行時のみ費用が発生する。
 

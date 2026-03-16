@@ -26,20 +26,20 @@ docs/
 
 ### コンテンツ種別の使い分け
 
-| 種別 | ファイル名 | 用途 |
-|------|-----------|------|
-| **Article** | `YYYY-MM-DD-<slug>.md` | ニュース反応・考察・技術解説・比較分析 |
-| **Spec** | `<id>.md` | 仕様書1本を体系的に解説するリファレンス |
+| 種別        | ファイル名             | 用途                                    |
+| ----------- | ---------------------- | --------------------------------------- |
+| **Article** | `YYYY-MM-DD-<slug>.md` | ニュース反応・考察・技術解説・比較分析  |
+| **Spec**    | `<id>.md`              | 仕様書1本を体系的に解説するリファレンス |
 
 ### Spec のファイル命名規則
 
-| 発行機関 | 形式 | 例 |
-|---------|------|-----|
-| IETF RFC | `rfc<番号>.md` | `rfc6749.md`, `rfc7636.md`, `rfc9101.md` |
-| OpenID Foundation | `<仕様名>.md` | `openid4vp.md`, `openid4vci.md`, `fapi2.md` |
-| W3C | `<仕様名>.md` | `vc-data-model.md`, `did-core.md`, `webauthn.md` |
-| FIDO Alliance | `<仕様名>.md` | `passkey.md`, `fido-cxp.md` |
-| ISO/IEC | `iso<番号>.md` | `iso18013-5.md` |
+| 発行機関          | 形式           | 例                                               |
+| ----------------- | -------------- | ------------------------------------------------ |
+| IETF RFC          | `rfc<番号>.md` | `rfc6749.md`, `rfc7636.md`, `rfc9101.md`         |
+| OpenID Foundation | `<仕様名>.md`  | `openid4vp.md`, `openid4vci.md`, `fapi2.md`      |
+| W3C               | `<仕様名>.md`  | `vc-data-model.md`, `did-core.md`, `webauthn.md` |
+| FIDO Alliance     | `<仕様名>.md`  | `passkey.md`, `fido-cxp.md`                      |
+| ISO/IEC           | `iso<番号>.md` | `iso18013-5.md`                                  |
 
 ## サイドバー自動生成
 

@@ -55,3 +55,7 @@
 
 - 企画書原文: `.agents/skills/bok/references/iam-bok-proposal.md`
 - Agent Skill 定義: `.agents/skills/bok/SKILL.md`
+
+## 執筆済み章
+
+- [第1章 IAMとは何か](/bok/01-iam-what-is-it)

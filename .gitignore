@@ -4,3 +4,9 @@
 
 !/.gitignore
 !/CNAME
+!/package.json
+!/package-lock.json
+!/docs/index.md
+!/docs/.vitepress/config.mts
+!/docs/public/CNAME
+!/.github/workflows/deploy.yml

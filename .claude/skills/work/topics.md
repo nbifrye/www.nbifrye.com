@@ -63,7 +63,7 @@
 
 | Topic                                                 | Priority | Score | File(s)                        | Last Updated |
 | ----------------------------------------------------- | -------- | ----- | ------------------------------ | ------------ |
-| eIDAS 2.0 と EUDI Wallet アーキテクチャ               | P0       | 0     | —                              | —            |
+| eIDAS 2.0 と EUDI Wallet アーキテクチャ               | P0       | 2     | docs/articles/2026-04-03-eidas2-eudi-wallet.md | 2026-04-03   |
 | NIST SP 800-63-4 デジタルアイデンティティガイドライン | P0       | 3     | docs/specs/nist-sp-800-63-4.md | 2026-04-03   |
 | 日本のデジタル社会形成基本法                          | P1       | 0     | —                              | —            |
 | マイナンバー法改正 (2024)                             | P1       | 0     | —                              | —            |
@@ -101,9 +101,9 @@
 
 | Topic                                                    | Priority | Score | File(s) | Last Updated |
 | -------------------------------------------------------- | -------- | ----- | ------- | ------------ |
-| EUDI Wallet の実装状況（ARF / 参照実装）                 | P0       | 0     | —       | —            |
-| EUDI Wallet ARF（Architecture Reference Framework）      | P0       | 0     | —       | —            |
-| マイナカード・公的個人認証サービス（JPKI）               | P0       | 0     | —       | —            |
+| EUDI Wallet の実装状況（ARF / 参照実装）                 | P0       | 2     | docs/articles/2026-04-03-eudi-wallet-implementation.md      | 2026-04-03   |
+| EUDI Wallet ARF（Architecture Reference Framework）      | P0       | 2     | docs/articles/2026-04-03-eudi-wallet-implementation.md      | 2026-04-03   |
+| マイナカード・公的個人認証サービス（JPKI）               | P0       | 3     | docs/specs/jpki.md                                          | 2026-04-03   |
 | Apple / Google のパスキー戦略                            | P1       | 0     | —       | —            |
 | 日本のフィンテック eKYC 動向                             | P1       | 0     | —       | —            |
 | マイナカードのデジタル活用（健康保険証・運転免許証統合） | P1       | 0     | —       | —            |

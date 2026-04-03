@@ -6,7 +6,15 @@
 !/CNAME
 !/package.json
 !/package-lock.json
+!/CLAUDE.md
 !/docs/index.md
 !/docs/.vitepress/config.mts
 !/docs/public/CNAME
+!/docs/articles/*.md
+!/docs/specs/*.md
+!/.claude/settings.json
+!/.claude/hooks/format-md.sh
+!/.claude/skills/work/SKILL.md
+!/.claude/skills/work/topics.md
+!/.claude/skills/work/style-guide.md
 !/.github/workflows/deploy.yml

@@ -1,9 +1,21 @@
 import { defineConfig } from 'vitepress'
-import { readdirSync, existsSync } from 'fs'
+import { readdirSync, existsSync, readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+function getTitle(filePath: string, fallback: string): string {
+  const content = readFileSync(filePath, 'utf-8')
+  const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/)
+  if (frontmatterMatch) {
+    const titleMatch = frontmatterMatch[1].match(/^title:\s*["']?(.+?)["']?\s*$/m)
+    if (titleMatch) return titleMatch[1]
+  }
+  const headingMatch = content.match(/^#\s+(.+)$/m)
+  if (headingMatch) return headingMatch[1]
+  return fallback
+}
 
 function getArticles() {
   const dir = join(__dirname, '../articles')
@@ -14,7 +26,8 @@ function getArticles() {
     .reverse()
     .map((f) => {
       const slug = f.replace('.md', '')
-      const text = slug.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/-/g, ' ')
+      const fallback = slug.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/-/g, ' ')
+      const text = getTitle(join(dir, f), fallback)
       return { text, link: `/articles/${slug}` }
     })
 }
@@ -27,7 +40,8 @@ function getSpecs() {
     .sort()
     .map((f) => {
       const slug = f.replace('.md', '')
-      return { text: slug, link: `/specs/${slug}` }
+      const text = getTitle(join(dir, f), slug)
+      return { text, link: `/specs/${slug}` }
     })
 }
 

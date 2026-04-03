@@ -1,6 +1,8 @@
 ---
 title: "Decentralized Identifiers (DIDs) v1.0 / v1.1"
 description: "W3C が標準化した分散型識別子の仕様解説。DID の構文・DID Document の構造・DID Resolution・主要 DID メソッドの比較と実装上の注意点を網羅します。"
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -281,7 +283,7 @@ DID v1.1 は 2026 年 3 月に Candidate Recommendation として公開されま
 | [Verifiable Credentials Data Model 2.0](https://www.w3.org/TR/vc-data-model-2.0/)                                   | DID は VC の `issuer`・`id`・`credentialSubject.id` として使用 |
 | [DID Resolution v0.3](https://www.w3.org/TR/did-resolution/)                                                        | DID の解決アルゴリズムと API を定義（DID v1.1 から分離）       |
 | [DID Specification Registries](https://www.w3.org/TR/did-spec-registries/)                                          | DID メソッド・プロパティ・表現形式の登録簿                     |
-| [SD-JWT Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-08.txt)                  | VC の具体的なトークン形式。DID を発行者識別子として利用        |
+| [SD-JWT Verifiable Credentials](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/)                       | VC の具体的なトークン形式。DID を発行者識別子として利用        |
 | [OpenID for Verifiable Presentations (OID4VP)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html) | DID を使った VP の提示プロトコル                               |
 | RFC 3986                                                                                                            | DID が準拠する URI の基本文法                                  |
 | RFC 7517 (JWK)                                                                                                      | 検証メソッドの `publicKeyJwk` 形式                             |
@@ -292,7 +294,7 @@ DID v1.1 は 2026 年 3 月に Candidate Recommendation として公開されま
 
 - [Decentralized Identifiers (DIDs) v1.0 — W3C Recommendation (2022-07-19)](https://www.w3.org/TR/did-1.0/)
 - [Decentralized Identifiers (DIDs) v1.1 — W3C Candidate Recommendation (2026-03-05)](https://www.w3.org/TR/did-1.1/)
-- [DID Resolution v0.3 — W3C Working Draft (2026-02-08)](https://www.w3.org/TR/did-resolution/)
+- [DID Resolution v0.3 — W3C Working Draft (2026-03-29)](https://www.w3.org/TR/did-resolution/)
 - [DID Specification Registries](https://www.w3.org/TR/did-spec-registries/)
 - [did:key Method Specification](https://w3c-ccg.github.io/did-key-spec/)
 - [did:web Method Specification](https://w3c-ccg.github.io/did-method-web/)

@@ -1,85 +1,122 @@
 # Digital Identity Topic Coverage Matrix
 
 `/work` 実行時にこのファイルを参照してカバレッジギャップを特定します。
-記事追加時は対応する `[ ]` を `[x]` に更新してください。
+
+## スコア凡例
+
+| Score | 意味                                 |
+| ----- | ------------------------------------ |
+| 0     | 未着手                               |
+| 1     | 他の記事で言及あり                   |
+| 2     | 専用記事あり（概要レベル）           |
+| 3     | 専用仕様解説あり（詳細レベル）       |
+| 4     | 複数記事 + 仕様解説 + 相互リンク済み |
+
+## 優先度
+
+- **P0**: 必須カバレッジ（このサイトの核心）
+- **P1**: 重要（6ヶ月以内に score ≥ 1 目標）
+- **P2**: あれば望ましい
 
 ---
 
-## 1. OpenID Standards
+## Domain 1: OpenID Standards
 
-| Status | Topic | ファイル |
-| ------ | ----- | -------- |
-| [ ]    | OAuth 2.0 Authorization Framework (RFC 6749) | `docs/specs/rfc6749.md` |
-| [ ]    | OAuth 2.0 Bearer Token (RFC 6750) | `docs/specs/rfc6750.md` |
-| [ ]    | PKCE — Proof Key for Code Exchange (RFC 7636) | `docs/specs/rfc7636.md` |
-| [ ]    | JWT — JSON Web Token (RFC 7519) | `docs/specs/rfc7519.md` |
-| [ ]    | JWK — JSON Web Key (RFC 7517) | `docs/specs/rfc7517.md` |
-| [ ]    | JWT Access Token (RFC 9068) | `docs/specs/rfc9068.md` |
-| [ ]    | JWT-Secured Authorization Request / JAR (RFC 9101) | `docs/specs/rfc9101.md` |
-| [ ]    | Pushed Authorization Requests / PAR (RFC 9126) | `docs/specs/rfc9126.md` |
-| [ ]    | OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | `docs/specs/rfc9396.md` |
-| [ ]    | OpenID Connect Core 1.0 | `docs/specs/oidc-core.md` |
-| [ ]    | OpenID Connect Discovery 1.0 | `docs/specs/oidc-discovery.md` |
-| [ ]    | FAPI 2.0 Security Profile | `docs/specs/fapi2.md` |
-| [ ]    | OpenID for Verifiable Credential Issuance (OID4VCI) | `docs/specs/openid4vci.md` |
-| [ ]    | OpenID for Verifiable Presentations (OID4VP) | `docs/specs/openid4vp.md` |
-| [ ]    | OpenID Federation 1.0 | `docs/specs/openid-federation.md` |
-| [ ]    | Self-Issued OpenID Provider v2 (SIOPv2) | `docs/specs/siop-v2.md` |
-
----
-
-## 2. W3C Standards
-
-| Status | Topic | ファイル |
-| ------ | ----- | -------- |
-| [ ]    | Verifiable Credentials Data Model 2.0 | `docs/specs/vc-data-model.md` |
-| [ ]    | Decentralized Identifiers (DID) Core 1.0 | `docs/specs/did-core.md` |
-| [ ]    | Web Authentication (WebAuthn) Level 3 | `docs/specs/webauthn.md` |
-| [ ]    | SD-JWT Verifiable Credentials (SD-JWT VC) | `docs/specs/sd-jwt-vc.md` |
-| [ ]    | Selective Disclosure for JWTs (SD-JWT, RFC 9558) | `docs/specs/rfc9558.md` |
+| Topic                                                  | Priority | Score | File(s) | Last Updated |
+| ------------------------------------------------------ | -------- | ----- | ------- | ------------ |
+| OAuth 2.0 Authorization Framework (RFC 6749)           | P0       | 0     | —       | —            |
+| OAuth 2.0 Bearer Token (RFC 6750)                      | P1       | 0     | —       | —            |
+| PKCE — Proof Key for Code Exchange (RFC 7636)          | P1       | 0     | —       | —            |
+| JWT — JSON Web Token (RFC 7519)                        | P0       | 0     | —       | —            |
+| JWK — JSON Web Key (RFC 7517)                          | P1       | 0     | —       | —            |
+| JWT Access Token (RFC 9068)                            | P1       | 0     | —       | —            |
+| JWT-Secured Authorization Request / JAR (RFC 9101)     | P1       | 0     | —       | —            |
+| Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 0     | —       | —            |
+| DPoP — Demonstrating Proof of Possession (RFC 9449)    | P1       | 0     | —       | —            |
+| OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 0     | —       | —            |
+| OpenID Connect Core 1.0                                | P0       | 0     | —       | —            |
+| OpenID Connect Discovery 1.0                           | P1       | 0     | —       | —            |
+| FAPI 2.0 Security Profile                              | P1       | 0     | —       | —            |
+| OpenID for Verifiable Credential Issuance (OID4VCI)    | P0       | 0     | —       | —            |
+| OpenID for Verifiable Presentations (OID4VP)           | P0       | 0     | —       | —            |
+| Self-Issued OpenID Provider v2 (SIOPv2)                | P1       | 0     | —       | —            |
+| OpenID Federation 1.0                                  | P1       | 0     | —       | —            |
 
 ---
 
-## 3. Regulatory
+## Domain 2: W3C Standards
 
-| Status | Topic | ファイル |
-| ------ | ----- | -------- |
-| [ ]    | eIDAS 2.0 と EUDI Wallet アーキテクチャ | `docs/specs/eidas2.md` または `docs/articles/` |
-| [ ]    | NIST SP 800-63-4 デジタルアイデンティティガイドライン | `docs/articles/YYYY-MM-DD-nist-sp800-63-4.md` |
-| [ ]    | 日本のデジタル社会実現に向けた規制改革（マイナンバー法改正） | `docs/articles/` |
-| [ ]    | 犯収法改正と eKYC | `docs/articles/` |
-
----
-
-## 4. Enterprise Identity
-
-| Status | Topic | ファイル |
-| ------ | ----- | -------- |
-| [ ]    | Shared Signals Framework / CAEP | `docs/specs/ssf-caep.md` |
-| [ ]    | IPSIE — Interoperability Profile for Secure Identity in the Enterprise | `docs/specs/ipsie.md` |
-| [ ]    | SCIM 2.0 (RFC 7643 / 7644) | `docs/specs/scim2.md` |
-| [ ]    | WIMSE — Workload Identity in Multi-System Environments | `docs/specs/wimse.md` |
-| [ ]    | SPIFFE / SPIRE ワークロードアイデンティティ | `docs/articles/` |
+| Topic                                            | Priority | Score | File(s) | Last Updated |
+| ------------------------------------------------ | -------- | ----- | ------- | ------------ |
+| Verifiable Credentials Data Model 2.0            | P0       | 0     | —       | —            |
+| Verifiable Presentations                         | P0       | 0     | —       | —            |
+| Decentralized Identifiers (DID) Core 1.0         | P0       | 0     | —       | —            |
+| DID Methods 概観                                 | P1       | 0     | —       | —            |
+| Web Authentication (WebAuthn) Level 3            | P0       | 0     | —       | —            |
+| SD-JWT Verifiable Credentials (SD-JWT VC)        | P0       | 0     | —       | —            |
+| Selective Disclosure for JWTs (SD-JWT, RFC 9558) | P1       | 0     | —       | —            |
+| CBOR / COSE                                      | P1       | 0     | —       | —            |
 
 ---
 
-## 5. Emerging Technologies
+## Domain 3: Regulatory
 
-| Status | Topic | ファイル |
-| ------ | ----- | -------- |
-| [ ]    | Zero Knowledge Proofs × デジタルアイデンティティ | `docs/articles/` |
-| [ ]    | AI エージェントのアイデンティティ課題 | `docs/articles/` |
-| [ ]    | mDL — Mobile Driver's License (ISO 18013-5) | `docs/specs/iso18013-5.md` |
-| [ ]    | Privacy-Preserving Credentials（BBS+、AnonCreds） | `docs/articles/` |
+| Topic                                                 | Priority | Score | File(s) | Last Updated |
+| ----------------------------------------------------- | -------- | ----- | ------- | ------------ |
+| eIDAS 2.0 と EUDI Wallet アーキテクチャ               | P0       | 0     | —       | —            |
+| NIST SP 800-63-4 デジタルアイデンティティガイドライン | P0       | 0     | —       | —            |
+| 日本のデジタル社会形成基本法                          | P1       | 0     | —       | —            |
+| マイナンバー法改正 (2024)                             | P1       | 0     | —       | —            |
+| 犯収法改正と eKYC                                     | P1       | 0     | —       | —            |
+| GDPR とデジタルアイデンティティ                       | P2       | 0     | —       | —            |
 
 ---
 
-## 6. Regional Adoption
+## Domain 4: Enterprise Identity
 
-| Status | Topic | ファイル |
-| ------ | ----- | -------- |
-| [ ]    | EUDI Wallet の実装状況（ARF / 参照実装） | `docs/articles/` |
-| [ ]    | マイナカード・公的個人認証サービス（JPKI） | `docs/articles/` |
-| [ ]    | Apple / Google のパスキー戦略 | `docs/articles/` |
-| [ ]    | 日本のフィンテック eKYC 動向 | `docs/articles/` |
-| [ ]    | MyNumber カードのデジタル活用（健康保険証・運転免許証統合） | `docs/articles/` |
+| Topic                                                                  | Priority | Score | File(s) | Last Updated |
+| ---------------------------------------------------------------------- | -------- | ----- | ------- | ------------ |
+| Shared Signals Framework / CAEP                                        | P1       | 0     | —       | —            |
+| IPSIE — Interoperability Profile for Secure Identity in the Enterprise | P1       | 0     | —       | —            |
+| SCIM 2.0 (RFC 7643 / 7644)                                             | P1       | 0     | —       | —            |
+| WIMSE — Workload Identity in Multi-System Environments                 | P2       | 0     | —       | —            |
+| SPIFFE / SPIRE ワークロードアイデンティティ                            | P2       | 0     | —       | —            |
+| ワークロードアイデンティティのパターン                                 | P1       | 0     | —       | —            |
+
+---
+
+## Domain 5: Emerging Technologies
+
+| Topic                                             | Priority | Score | File(s) | Last Updated |
+| ------------------------------------------------- | -------- | ----- | ------- | ------------ |
+| Zero Knowledge Proofs × デジタルアイデンティティ  | P1       | 0     | —       | —            |
+| AI エージェントのアイデンティティ課題             | P0       | 0     | —       | —            |
+| mDL — Mobile Driver's License (ISO 18013-5)       | P1       | 0     | —       | —            |
+| Privacy-Preserving Credentials（BBS+、AnonCreds） | P1       | 0     | —       | —            |
+| 選択的開示（Selective Disclosure）技術比較        | P1       | 0     | —       | —            |
+
+---
+
+## Domain 6: Regional Adoption
+
+| Topic                                                    | Priority | Score | File(s) | Last Updated |
+| -------------------------------------------------------- | -------- | ----- | ------- | ------------ |
+| EUDI Wallet の実装状況（ARF / 参照実装）                 | P0       | 0     | —       | —            |
+| EUDI Wallet ARF（Architecture Reference Framework）      | P0       | 0     | —       | —            |
+| マイナカード・公的個人認証サービス（JPKI）               | P0       | 0     | —       | —            |
+| Apple / Google のパスキー戦略                            | P1       | 0     | —       | —            |
+| 日本のフィンテック eKYC 動向                             | P1       | 0     | —       | —            |
+| マイナカードのデジタル活用（健康保険証・運転免許証統合） | P1       | 0     | —       | —            |
+| 日本のパスキー普及戦略                                   | P1       | 0     | —       | —            |
+
+---
+
+## Gap Analysis 指示（Coverage Analyst サブエージェント向け）
+
+ギャップ分析の手順:
+
+1. Score が 0 かつ Priority が P0 のトピックを最優先とする
+2. P0 ギャップの中では、ドメイン全体でカバレッジゼロのドメインを優先
+3. 優先度が同じ場合は、他の未カバートピックへのクロスリンクを生む可能性が高いトピックを選ぶ
+4. 最近（過去 3 ヶ月以内）の仕様更新があるトピックはタイムリー性で加点
+5. 上位 5 件を返す形式: トピック名・ドメイン・優先度・選定理由（1文）

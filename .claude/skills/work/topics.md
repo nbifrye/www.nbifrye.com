@@ -53,8 +53,8 @@
 | Decentralized Identifiers (DID) Core 1.0         | P0       | 3     | docs/specs/did-core.md      | 2026-04-03   |
 | DID Methods 概観                                 | P1       | 1     | docs/specs/did-core.md      | 2026-04-03   |
 | Web Authentication (WebAuthn) Level 3            | P0       | 3     | docs/specs/webauthn.md      | 2026-04-03   |
-| SD-JWT Verifiable Credentials (SD-JWT VC)        | P0       | 0     | —                           | —            |
-| Selective Disclosure for JWTs (SD-JWT, RFC 9901) | P1       | 0     | —                           | —            |
+| SD-JWT Verifiable Credentials (SD-JWT VC)        | P0       | 3     | docs/specs/sd-jwt-vc.md     | 2026-04-03   |
+| Selective Disclosure for JWTs (SD-JWT, RFC 9901) | P1       | 1     | docs/specs/sd-jwt-vc.md     | 2026-04-03   |
 | CBOR / COSE                                      | P1       | 0     | —                           | —            |
 
 ---

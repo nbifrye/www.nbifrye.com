@@ -19,3 +19,10 @@
 !/.claude/skills/work/topics.md
 !/.claude/skills/work/style-guide.md
 !/.github/workflows/deploy.yml
+!/.codex/settings.json
+!/.codex/hooks/format-md.sh
+!/.codex/hooks/session-start.sh
+!/.codex/skills/work/SKILL.md
+!/.codex/skills/work/topics.md
+!/.codex/skills/work/style-guide.md
+!/CODEX.md

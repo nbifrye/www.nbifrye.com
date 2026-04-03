@@ -4,6 +4,8 @@
 # Claude Code は PostToolUse 時に stdin へ以下の JSON を渡す:
 #   { "tool_name": "Write", "tool_input": { "file_path": "..." }, ... }
 
+set -euo pipefail
+
 FILE=$(node -e "
   let data = '';
   process.stdin.on('data', c => data += c);
@@ -18,6 +20,12 @@ FILE=$(node -e "
 if [[ "$FILE" == *.md ]] && [[ -f "$FILE" ]]; then
   OXFMT="${CLAUDE_PROJECT_DIR}/node_modules/.bin/oxfmt"
   if [[ -x "$OXFMT" ]]; then
-    "$OXFMT" "$FILE"
+    if ! "$OXFMT" "$FILE"; then
+      echo "format-md.sh: oxfmt failed on ${FILE}" >&2
+      exit 1
+    fi
+  else
+    echo "format-md.sh: oxfmt not found at ${OXFMT}" >&2
+    exit 1
   fi
 fi

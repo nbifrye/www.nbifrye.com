@@ -108,7 +108,7 @@ PostToolUse フックにより、Write/Edit ツール使用後は自動的に実
   - 新規記事: `feat: <トピック名>の記事を追加`
   - 基盤改善: `chore: <変更内容>`
   - バグ修正: `fix: <内容>`
-- **Push**: `git push -u origin HEAD`（現在のブランチへ push）
+- **Push**: `git push origin HEAD:main` を第一戦略とし、失敗時は `git push -u origin HEAD`（現在のブランチへ）
 
 ---
 

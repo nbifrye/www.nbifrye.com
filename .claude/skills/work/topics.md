@@ -34,7 +34,7 @@
 | Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 0     | —                     | —            |
 | DPoP — Demonstrating Proof of Possession (RFC 9449)    | P1       | 0     | —                     | —            |
 | OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 0     | —                     | —            |
-| OpenID Connect Core 1.0                                | P0       | 0     | —                     | —            |
+| OpenID Connect Core 1.0                                | P0       | 3     | docs/specs/oidc-core.md | 2026-04-03   |
 | OpenID Connect Discovery 1.0                           | P1       | 0     | —                     | —            |
 | FAPI 2.0 Security Profile                              | P1       | 0     | —                     | —            |
 | OpenID for Verifiable Credential Issuance (OID4VCI)    | P0       | 0     | —                     | —            |

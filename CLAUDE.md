@@ -89,7 +89,7 @@ PostToolUse フックにより、Write/Edit ツール使用後は自動的に実
 ## カバレッジ管理
 
 `.claude/skills/work/topics.md` にトピックマトリクスを管理しています。
-記事を追加したら、対応するチェックボックスを `[x]` に更新してください。
+記事を追加したら、該当行の Score 列を更新し、File(s) と Last Updated を記入してください。
 
 6つのドメイン:
 1. OpenID Standards (OAuth2, OIDC, OpenID4VC, OpenID Federation, FAPI2)
@@ -103,12 +103,12 @@ PostToolUse フックにより、Write/Edit ツール使用後は自動的に実
 
 ## Git ワークフロー
 
-- **ブランチ**: `claude/autonomous-knowledge-base-cZuro`
+- **ブランチ**: スケジュールタスクが実行時に払い出すブランチを使用する
 - **コミットメッセージ**:
   - 新規記事: `feat: <トピック名>の記事を追加`
   - 基盤改善: `chore: <変更内容>`
   - バグ修正: `fix: <内容>`
-- **Push**: `git push -u origin claude/autonomous-knowledge-base-cZuro`
+- **Push**: `git push -u origin HEAD`（現在のブランチへ push）
 
 ---
 

@@ -18,6 +18,24 @@ function getTitle(filePath: string, fallback: string): string {
   return fallback
 }
 
+function getTags(filePath: string): string[] {
+  const content = readFileSync(filePath, 'utf-8')
+  const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/)
+  if (!frontmatterMatch) return []
+  const tagsMatch = frontmatterMatch[1].match(/^tags:\s*\n((?:\s*-\s*.+\n?)*)/m)
+  if (!tagsMatch || !tagsMatch[1]) return []
+  return tagsMatch[1]
+    .split('\n')
+    .map((line) => line.match(/^\s*-\s*(.+)\s*$/)?.[1]?.trim())
+    .filter((tag): tag is string => Boolean(tag))
+}
+
+function getNavText(filePath: string, fallback: string): string {
+  const title = getTitle(filePath, fallback)
+  const tags = getTags(filePath)
+  return tags.includes('レビュー済み') ? `✅ ${title}` : title
+}
+
 function getArticles() {
   const dir = join(__dirname, '../articles')
   if (!existsSync(dir)) return []
@@ -28,7 +46,7 @@ function getArticles() {
     .map((f) => {
       const slug = f.replace('.md', '')
       const fallback = slug.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/-/g, ' ')
-      const text = getTitle(join(dir, f), fallback)
+      const text = getNavText(join(dir, f), fallback)
       return { text, link: `/articles/${slug}` }
     })
 }
@@ -41,7 +59,7 @@ function getSpecs() {
     .sort()
     .map((f) => {
       const slug = f.replace('.md', '')
-      const text = getTitle(join(dir, f), slug)
+      const text = getNavText(join(dir, f), slug)
       return { text, link: `/specs/${slug}` }
     })
 }

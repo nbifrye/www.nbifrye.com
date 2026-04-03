@@ -1,0 +1,5 @@
+schema_version: v1
+name: review
+display_name: Review
+description: 既存記事を一次情報に照合してレビューし、校正とレビュー済みタグ付与を行う。
+default_prompt: /review 既存記事の正確性をレビューして校正してください

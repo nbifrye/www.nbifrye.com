@@ -18,4 +18,6 @@
 !/.claude/skills/work/SKILL.md
 !/.claude/skills/work/topics.md
 !/.claude/skills/work/style-guide.md
+!/.agents/review/SKILL.md
+!/.agents/review/agents/openai.yaml
 !/.github/workflows/deploy.yml

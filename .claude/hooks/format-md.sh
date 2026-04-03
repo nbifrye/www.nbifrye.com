@@ -25,7 +25,7 @@ if [[ "$FILE" == *.md ]] && [[ -f "$FILE" ]]; then
       exit 1
     fi
   else
-    echo "format-md.sh: oxfmt not found at ${OXFMT}" >&2
-    exit 1
+    echo "format-md.sh: oxfmt not found at ${OXFMT} (skipping)" >&2
+    exit 0
   fi
 fi

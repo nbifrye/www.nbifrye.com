@@ -22,25 +22,25 @@
 
 ## Domain 1: OpenID Standards
 
-| Topic                                                  | Priority | Score | File(s) | Last Updated |
-| ------------------------------------------------------ | -------- | ----- | ------- | ------------ |
-| OAuth 2.0 Authorization Framework (RFC 6749)           | P0       | 0     | —       | —            |
-| OAuth 2.0 Bearer Token (RFC 6750)                      | P1       | 0     | —       | —            |
-| PKCE — Proof Key for Code Exchange (RFC 7636)          | P1       | 0     | —       | —            |
-| JWT — JSON Web Token (RFC 7519)                        | P0       | 0     | —       | —            |
-| JWK — JSON Web Key (RFC 7517)                          | P1       | 0     | —       | —            |
-| JWT Access Token (RFC 9068)                            | P1       | 0     | —       | —            |
-| JWT-Secured Authorization Request / JAR (RFC 9101)     | P1       | 0     | —       | —            |
-| Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 0     | —       | —            |
-| DPoP — Demonstrating Proof of Possession (RFC 9449)    | P1       | 0     | —       | —            |
-| OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 0     | —       | —            |
-| OpenID Connect Core 1.0                                | P0       | 0     | —       | —            |
-| OpenID Connect Discovery 1.0                           | P1       | 0     | —       | —            |
-| FAPI 2.0 Security Profile                              | P1       | 0     | —       | —            |
-| OpenID for Verifiable Credential Issuance (OID4VCI)    | P0       | 0     | —       | —            |
-| OpenID for Verifiable Presentations (OID4VP)           | P0       | 0     | —       | —            |
-| Self-Issued OpenID Provider v2 (SIOPv2)                | P1       | 0     | —       | —            |
-| OpenID Federation 1.0                                  | P1       | 0     | —       | —            |
+| Topic                                                  | Priority | Score | File(s)               | Last Updated |
+| ------------------------------------------------------ | -------- | ----- | --------------------- | ------------ |
+| OAuth 2.0 Authorization Framework (RFC 6749)           | P0       | 3     | docs/specs/rfc6749.md | 2026-04-03   |
+| OAuth 2.0 Bearer Token (RFC 6750)                      | P1       | 0     | —                     | —            |
+| PKCE — Proof Key for Code Exchange (RFC 7636)          | P1       | 0     | —                     | —            |
+| JWT — JSON Web Token (RFC 7519)                        | P0       | 3     | docs/specs/rfc7519.md | 2026-04-03   |
+| JWK — JSON Web Key (RFC 7517)                          | P1       | 0     | —                     | —            |
+| JWT Access Token (RFC 9068)                            | P1       | 0     | —                     | —            |
+| JWT-Secured Authorization Request / JAR (RFC 9101)     | P1       | 0     | —                     | —            |
+| Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 0     | —                     | —            |
+| DPoP — Demonstrating Proof of Possession (RFC 9449)    | P1       | 0     | —                     | —            |
+| OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 0     | —                     | —            |
+| OpenID Connect Core 1.0                                | P0       | 0     | —                     | —            |
+| OpenID Connect Discovery 1.0                           | P1       | 0     | —                     | —            |
+| FAPI 2.0 Security Profile                              | P1       | 0     | —                     | —            |
+| OpenID for Verifiable Credential Issuance (OID4VCI)    | P0       | 0     | —                     | —            |
+| OpenID for Verifiable Presentations (OID4VP)           | P0       | 0     | —                     | —            |
+| Self-Issued OpenID Provider v2 (SIOPv2)                | P1       | 0     | —                     | —            |
+| OpenID Federation 1.0                                  | P1       | 0     | —                     | —            |
 
 ---
 
@@ -108,4 +108,3 @@
 | 日本のフィンテック eKYC 動向                             | P1       | 0     | —       | —            |
 | マイナカードのデジタル活用（健康保険証・運転免許証統合） | P1       | 0     | —       | —            |
 | 日本のパスキー普及戦略                                   | P1       | 0     | —       | —            |
-

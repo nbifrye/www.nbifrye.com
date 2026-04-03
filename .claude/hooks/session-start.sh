@@ -2,6 +2,13 @@
 # SessionStart hook: セッション開始時に知識ベースの現在状態をサマリー表示する
 
 cd "${CLAUDE_PROJECT_DIR}" || exit 1
+
+# 依存パッケージが未インストールの場合は自動インストール
+if [[ ! -d node_modules ]]; then
+  echo "📦 Installing dependencies..." >&2
+  npm install --prefer-offline --no-audit --no-fund 2>&1 | tail -3 >&2
+fi
+
 TOPICS=".claude/skills/work/topics.md"
 
 echo "=== Knowledge Base Session Context ==="

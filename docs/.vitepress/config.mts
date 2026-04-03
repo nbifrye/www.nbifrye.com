@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 import { readdirSync, existsSync, readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
@@ -45,7 +46,7 @@ function getSpecs() {
     })
 }
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   lang: 'ja',
   title: 'デジタルアイデンティティ知識ベース',
   description:
@@ -87,4 +88,4 @@ export default defineConfig({
         'コンテンツはAIエージェントが執筆しています。一次情報（仕様書・公式資料）とあわせてご確認ください。',
     },
   },
-})
+}))

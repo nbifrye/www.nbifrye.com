@@ -14,6 +14,7 @@
 !/docs/specs/*.md
 !/.claude/settings.json
 !/.claude/hooks/format-md.sh
+!/.claude/hooks/session-start.sh
 !/.claude/skills/work/SKILL.md
 !/.claude/skills/work/topics.md
 !/.claude/skills/work/style-guide.md

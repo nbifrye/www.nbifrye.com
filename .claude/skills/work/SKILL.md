@@ -18,14 +18,13 @@ context: fork
 ### 1-1. 既存コンテンツを確認する
 
 ```bash
-# 既存の記事と仕様解説を列挙
 find docs/articles -name "*.md" ! -name "index.md" | sort
 find docs/specs -name "*.md" ! -name "index.md" | sort
 ```
 
 ### 1-2. トピックマトリクスと照合する
 
-`.claude/skills/work/topics.md` を読み、`[ ]`（未着手）のトピックを抽出します。
+`.claude/skills/work/topics.md` を読み、Score が 0 のトピックを抽出します。
 
 ### 1-3. カバレッジギャップリストを作成する
 
@@ -59,25 +58,52 @@ find docs/specs -name "*.md" ! -name "index.md" | sort
 Agent(subagent_type="Explore", prompt="""
 次のトピックについて一次情報を収集してください: <選定したトピック>
 
-1. 仕様書本文を取得:
-   - IETF RFC であれば https://www.rfc-editor.org/rfc/rfcXXXX.html
-   - OpenID Foundation であれば https://openid.net/specs/ から最新版
-   - W3C であれば https://www.w3.org/TR/ から最新版
-   - FIDO Alliance であれば https://fidoalliance.org/specifications/
+## 取得先
 
-2. WebSearch で最新動向を調査:
-   - "<仕様名> latest update 2025 OR 2026"
-   - "<仕様名> implementation Japan"
-   - 関連する日本語情報
+- IETF RFC: https://www.rfc-editor.org/rfc/rfcXXXX.html
+- OpenID Foundation: https://openid.net/specs/ から最新版
+- W3C: https://www.w3.org/TR/ から最新版
+- FIDO Alliance: https://fidoalliance.org/specifications/
 
-3. 以下をまとめて返してください:
-   - 仕様の正式名称・バージョン・URL
-   - 主要な技術的概念（箇条書き）
-   - 設計上の重要な決定とその理由
-   - 関連仕様・前身仕様・後継仕様
-   - 実装例・採用事例
-   - 注意点・既知の問題
-   - 最近の変更・更新情報
+## 検索クエリ
+
+WebSearch で以下を調査:
+- "<仕様名> specification latest 2025 OR 2026"
+- "<仕様名> implementation Japan"
+
+## 返答形式（必ずこの構造で返してください）
+
+### 仕様メタデータ
+- 正式名称:
+- バージョン:
+- 公式 URL:
+- ステータス（Draft / Final / Superseded）:
+
+### 概要
+仕様が解決する問題と主な用途（200 字以内）
+
+### 主要な技術的概念
+- 概念 1: 説明
+- 概念 2: 説明
+（主要なものを 5〜10 個）
+
+### 設計上の重要な決定
+なぜそう設計されたか、トレードオフを含めて説明
+
+### 関連仕様
+- 前身仕様:
+- 後継仕様:
+- 依存する仕様:
+- 競合・代替仕様:
+
+### 実装例・採用事例
+実際に採用している製品・サービス・標準
+
+### 注意点・既知の問題
+実装者が踏みやすい落とし穴
+
+### 最近の変更
+過去 12 ヶ月以内のアップデート（なければ「なし」）
 """)
 ```
 
@@ -111,7 +137,7 @@ description: <1〜2文の説明>
 
 ## 設計思想
 
-<!-- 主要な設計上の決定とその理由 -->
+<!-- 主要な設計上の決定とその理由。トレードオフも含む -->
 
 ## 技術詳細
 
@@ -149,17 +175,28 @@ date: YYYY-MM-DD
 
 ## 要約
 
-<!-- 記事の主張を 3〜5 行で -->
+<!-- 記事の主張・結論を 3〜5 行で。読者がここだけ読んでも価値があるように -->
 
-## 本文
+## 背景
 
-<!-- 本論 -->
+<!-- なぜ今このトピックが重要か。前提知識の整理 -->
+
+## <技術詳細セクション（タイトルは内容に合わせる）>
+
+<!-- 本論。必要に応じて複数の h2 セクションに分割 -->
+<!-- コード例・シーケンス図・比較表を積極的に使う -->
+
+## 実装・採用上の考察
+
+<!-- 実装者・意思決定者の視点からの分析。メリット・トレードオフ・注意点 -->
 
 ## まとめ
 
 <!-- 読者へのアクションアイテム・今後の展望 -->
 
 ## 参考資料
+
+<!-- 一次情報へのリンク必須 -->
 ```
 
 ---
@@ -178,7 +215,9 @@ Agent(subagent_type="Explore", prompt="""
 3. 誤った情報・誤解を招く表現がないか
 4. 関連仕様との整合性（矛盾がないか）
 
-問題があれば具体的な修正案を返してください。
+返答形式:
+- 問題なし: 「レビュー完了：重大な問題なし」と返す
+- 問題あり: 問題箇所・修正案を箇条書きで返す
 """)
 ```
 
@@ -190,7 +229,7 @@ Agent(subagent_type="Explore", prompt="""
 
 以下の観点で日本語品質を確認し、必要に応じて修正してください。
 
-- 文末の統一（「です・ます」調または「だ・である」調、混在しない）
+- 文末の統一（「です・ます」調、混在しない）
 - 技術用語の表記統一（style-guide.md の表記ルールに従う）
 - 句読点の適切な使用（読みやすさ）
 - 受動態の多用を避け、能動的な文体
@@ -204,31 +243,44 @@ Agent(subagent_type="Explore", prompt="""
 
 ### `.claude/skills/work/topics.md`
 
-- 執筆したトピックのチェックボックスを `[x]` に更新
-- 今回の調査で発見した新しいトピック候補を `[ ]` として追加
+- 執筆したトピックの Score を更新（0 → 2 または 3）
+- File(s) 列に作成したファイルのパスを記入
+- Last Updated 列に今日の日付 (YYYY-MM-DD) を記入
+- 今回の調査で発見した新しいトピック候補を追加
 
 ### `.claude/skills/work/style-guide.md`
 
-- 今回使った表現パターンで有用なものをガイドに追記
+今回使った表現パターンで有用なものをガイドに追記（必要な場合のみ）
 
 ### `CLAUDE.md`
 
-- プロジェクト方針に変更が必要な場合のみ更新（軽微な変更は不要）
-
-### `docs/.vitepress/config.mts`
-
-- サイドバーは動的生成のため通常は変更不要
-- nav リンクの修正が必要な場合のみ更新
+プロジェクト方針に変更が必要な場合のみ更新（軽微な変更は不要）
 
 ---
 
-## Step 8 — Git commit & push
+## Step 8 — ビルド検証
 
-すべてのファイルをステージしてコミット・プッシュしてください。
+コミット前に VitePress ビルドが通ることを確認してください。
 
 ```bash
-# ステージング
-git add docs/ .claude/ CLAUDE.md
+npm run docs:build
+```
+
+ビルドエラーが出た場合:
+- frontmatter の構文エラー（タイトル・description の引用符など）を確認
+- Markdown の見出し構造を確認
+- リンク切れを確認
+修正後、再度 `npm run docs:build` を実行してください。
+
+---
+
+## Step 9 — Git commit & push
+
+今回の実行で作成・変更したファイルのみを明示的にステージしてコミット・プッシュしてください。
+
+```bash
+# 今回作成・変更したファイルのみを追加（例）
+git add docs/specs/rfc6749.md .claude/skills/work/topics.md
 
 # コミット（記事の内容に合わせてメッセージを変更）
 git commit -m "feat: <トピック名>の記事を追加
@@ -236,14 +288,14 @@ git commit -m "feat: <トピック名>の記事を追加
 - docs/<type>/<filename>.md を新規作成
 - .claude/skills/work/topics.md を更新"
 
-# プッシュ
-git push -u origin claude/autonomous-knowledge-base-cZuro
+# プッシュ（現在のブランチへ）
+git push -u origin HEAD
 ```
 
 ---
 
 ## エラー対処
 
-- **WebFetch 失敗**: 別の URL（例: HTML版 → テキスト版 RFC）を試す
-- **ビルドエラー**: `npm run docs:build` で確認し、frontmatter の構文エラーを修正
-- **push 失敗**: `git pull --rebase origin claude/autonomous-knowledge-base-cZuro` してから再試行
+- **WebFetch 失敗**: 別の URL（例: HTML 版 → テキスト版 RFC）を試す
+- **ビルドエラー**: frontmatter の構文エラー・リンク切れを修正してから再実行
+- **push 失敗**: `git pull --rebase origin HEAD` してから再試行

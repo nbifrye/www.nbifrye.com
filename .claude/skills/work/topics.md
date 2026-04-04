@@ -61,27 +61,27 @@
 
 ## Domain 3: Regulatory
 
-| Topic                                                 | Priority | Score | File(s)                        | Last Updated |
-| ----------------------------------------------------- | -------- | ----- | ------------------------------ | ------------ |
+| Topic                                                 | Priority | Score | File(s)                                        | Last Updated |
+| ----------------------------------------------------- | -------- | ----- | ---------------------------------------------- | ------------ |
 | eIDAS 2.0 と EUDI Wallet アーキテクチャ               | P0       | 2     | docs/articles/2026-04-03-eidas2-eudi-wallet.md | 2026-04-03   |
-| NIST SP 800-63-4 デジタルアイデンティティガイドライン | P0       | 3     | docs/specs/nist-sp-800-63-4.md | 2026-04-03   |
-| 日本のデジタル社会形成基本法                          | P1       | 0     | —                              | —            |
-| マイナンバー法改正 (2024)                             | P1       | 0     | —                              | —            |
-| 犯収法改正と eKYC                                     | P1       | 0     | —                              | —            |
-| GDPR とデジタルアイデンティティ                       | P2       | 0     | —                              | —            |
+| NIST SP 800-63-4 デジタルアイデンティティガイドライン | P0       | 3     | docs/specs/nist-sp-800-63-4.md                 | 2026-04-03   |
+| 日本のデジタル社会形成基本法                          | P1       | 0     | —                                              | —            |
+| マイナンバー法改正 (2024)                             | P1       | 0     | —                                              | —            |
+| 犯収法改正と eKYC                                     | P1       | 0     | —                                              | —            |
+| GDPR とデジタルアイデンティティ                       | P2       | 0     | —                                              | —            |
 
 ---
 
 ## Domain 4: Enterprise Identity
 
-| Topic                                                                  | Priority | Score | File(s) | Last Updated |
-| ---------------------------------------------------------------------- | -------- | ----- | ------- | ------------ |
-| Shared Signals Framework / CAEP                                        | P1       | 0     | —       | —            |
-| IPSIE — Interoperability Profile for Secure Identity in the Enterprise | P1       | 0     | —       | —            |
-| SCIM 2.0 (RFC 7643 / 7644)                                             | P1       | 0     | —       | —            |
-| WIMSE — Workload Identity in Multi-System Environments                 | P2       | 0     | —       | —            |
-| SPIFFE / SPIRE ワークロードアイデンティティ                            | P2       | 0     | —       | —            |
-| ワークロードアイデンティティのパターン                                 | P1       | 0     | —       | —            |
+| Topic                                                                  | Priority | Score | File(s)                | Last Updated |
+| ---------------------------------------------------------------------- | -------- | ----- | ---------------------- | ------------ |
+| Shared Signals Framework / CAEP                                        | P1       | 3     | docs/specs/ssf-caep.md | 2026-04-04   |
+| IPSIE — Interoperability Profile for Secure Identity in the Enterprise | P1       | 0     | —                      | —            |
+| SCIM 2.0 (RFC 7643 / 7644)                                             | P1       | 3     | docs/specs/scim2.md    | 2026-04-04   |
+| WIMSE — Workload Identity in Multi-System Environments                 | P2       | 0     | —                      | —            |
+| SPIFFE / SPIRE ワークロードアイデンティティ                            | P2       | 0     | —                      | —            |
+| ワークロードアイデンティティのパターン                                 | P1       | 0     | —                      | —            |
 
 ---
 
@@ -99,12 +99,12 @@
 
 ## Domain 6: Regional Adoption
 
-| Topic                                                    | Priority | Score | File(s) | Last Updated |
-| -------------------------------------------------------- | -------- | ----- | ------- | ------------ |
-| EUDI Wallet の実装状況（ARF / 参照実装）                 | P0       | 2     | docs/articles/2026-04-03-eudi-wallet-implementation.md      | 2026-04-03   |
-| EUDI Wallet ARF（Architecture Reference Framework）      | P0       | 2     | docs/articles/2026-04-03-eudi-wallet-implementation.md      | 2026-04-03   |
-| マイナカード・公的個人認証サービス（JPKI）               | P0       | 3     | docs/specs/jpki.md                                          | 2026-04-03   |
-| Apple / Google のパスキー戦略                            | P1       | 0     | —       | —            |
-| 日本のフィンテック eKYC 動向                             | P1       | 0     | —       | —            |
-| マイナカードのデジタル活用（健康保険証・運転免許証統合） | P1       | 0     | —       | —            |
-| 日本のパスキー普及戦略                                   | P1       | 0     | —       | —            |
+| Topic                                                    | Priority | Score | File(s)                                                | Last Updated |
+| -------------------------------------------------------- | -------- | ----- | ------------------------------------------------------ | ------------ |
+| EUDI Wallet の実装状況（ARF / 参照実装）                 | P0       | 2     | docs/articles/2026-04-03-eudi-wallet-implementation.md | 2026-04-03   |
+| EUDI Wallet ARF（Architecture Reference Framework）      | P0       | 2     | docs/articles/2026-04-03-eudi-wallet-implementation.md | 2026-04-03   |
+| マイナカード・公的個人認証サービス（JPKI）               | P0       | 3     | docs/specs/jpki.md                                     | 2026-04-03   |
+| Apple / Google のパスキー戦略                            | P1       | 0     | —                                                      | —            |
+| 日本のフィンテック eKYC 動向                             | P1       | 0     | —                                                      | —            |
+| マイナカードのデジタル活用（健康保険証・運転免許証統合） | P1       | 0     | —                                                      | —            |
+| 日本のパスキー普及戦略                                   | P1       | 0     | —                                                      | —            |

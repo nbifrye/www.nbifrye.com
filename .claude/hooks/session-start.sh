@@ -76,4 +76,18 @@ else
 fi
 echo ""
 
+# 未レビュー記事の検出
+# フロントマターに "レビュー済み" タグが含まれないファイルを列挙する
+UNREVIEWED=$(find docs/articles docs/specs -name "*.md" ! -name "index.md" 2>/dev/null \
+  | xargs grep -L "レビュー済み" 2>/dev/null \
+  | sort)
+
+if [ -n "$UNREVIEWED" ]; then
+  echo "📋 Unreviewed content (review before writing new articles):"
+  echo "$UNREVIEWED" | sed 's/^/  /'
+else
+  echo "✅ All content reviewed"
+fi
+echo ""
+
 echo "=== End of Context ==="

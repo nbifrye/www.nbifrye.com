@@ -92,6 +92,7 @@ PostToolUse フックにより、Write/Edit ツール使用後は自動的に実
 記事を追加したら、該当行の Score 列を更新し、File(s) と Last Updated を記入してください。
 
 6つのドメイン:
+
 1. OpenID Standards (OAuth2, OIDC, OpenID4VC, OpenID Federation, FAPI2)
 2. W3C Standards (Verifiable Credentials, DID, WebAuthn)
 3. Regulatory (eIDAS 2.0, NIST SP 800-63-4, 日本の規制)
@@ -103,6 +104,7 @@ PostToolUse フックにより、Write/Edit ツール使用後は自動的に実
 
 ## Git ワークフロー
 
+- **`.gitignore` はホワイトリスト方式**: `**`（全除外）をベースに、必要なファイルだけを `!` で許可している。新しいファイルを追加した際は `.gitignore` に明示的に許可行を追記しないと `git add` できない。
 - **ブランチ**: スケジュールタスクが実行時に払い出すブランチを使用する
 - **コミットメッセージ**:
   - 新規記事: `feat: <トピック名>の記事を追加`

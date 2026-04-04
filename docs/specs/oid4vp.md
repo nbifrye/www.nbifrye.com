@@ -1,6 +1,8 @@
 ---
 title: "OpenID for Verifiable Presentations (OID4VP) 1.0"
 description: OAuth 2.0 を拡張してVerifiable Credentialのプレゼンテーションを標準化するプロトコル。W3C VC・ISO mdoc・SD-JWT VCの複数フォーマットに対応し、同一デバイス・クロスデバイスの双方のフローをサポートする。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -11,11 +13,11 @@ description: OAuth 2.0 を拡張してVerifiable Credentialのプレゼンテー
 
 OpenID for Verifiable Presentations（OID4VP）は、OAuth 2.0 を基盤として Verifiable Credential のプレゼンテーション（提示）を標準化するプロトコルです。検証者（Verifier）がウォレット（Wallet）に対してクレデンシャルの提示を要求し、保有者（Holder）が同意した上で暗号学的に検証可能な形式で応答する仕組みを定義します。
 
-2025年7月9日に OpenID Foundation の最終仕様（Final Specification）として承認されており、W3C Verifiable Credentials Data Model・ISO/IEC 18013-5（mdoc）・IETF SD-JWT VC の3つのクレデンシャルフォーマットをサポートします。EUDI Wallet をはじめとする主要なデジタルアイデンティティエコシステムの中核プロトコルとして採用されています。
+2025年7月10日に OpenID Foundation の最終仕様（Final Specification）として承認されており、W3C Verifiable Credentials Data Model・ISO/IEC 18013-5（mdoc）・IETF SD-JWT VC の3つのクレデンシャルフォーマットをサポートします。EUDI Wallet をはじめとする主要なデジタルアイデンティティエコシステムの中核プロトコルとして採用されています。
 
 **正式名称**: OpenID for Verifiable Presentations 1.0
 **公式 URL**: <https://openid.net/specs/openid-4-verifiable-presentations-1_0-final.html>
-**ステータス**: Final Specification（2025年7月9日承認）
+**ステータス**: Final Specification（2025年7月10日承認）
 **策定組織**: OpenID Digital Credentials Protocols (DCP) Working Group
 
 ## 背景と経緯

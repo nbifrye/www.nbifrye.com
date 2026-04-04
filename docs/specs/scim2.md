@@ -1,6 +1,8 @@
 ---
 title: "SCIM 2.0 — System for Cross-domain Identity Management"
 description: RFC 7643 / RFC 7644 で定義されるユーザープロビジョニング標準の技術詳細と実装上の注意点を解説します。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -229,7 +231,7 @@ GET /scim/v2/Users?filter=name.familyName sw "田"
 
 ### 1. `id` と `externalId` の混同
 
-最も典型的な実装バグです。`id` はサービスプロバイダーが管理する内部識別子（不変）であり、`externalId` は IdP 側の識別子です。2025 年に発覚した Grafana Enterprise の CVE-2025-41115（CVSS 10.0）は、SCIM エンドポイントが `externalId` を整数型内部 ID として誤ってマッピングしていたため、任意のユーザーに成りすませる権限昇格を許してしまいました。`id` は必ずサービスプロバイダー側で生成・管理してください。
+最も典型的な実装バグです。`id` はサービスプロバイダーが管理する内部識別子（不変）であり、`externalId` は IdP 側の識別子です。2025 年 11 月に発覚した Grafana Enterprise の CVE-2025-41115（CVSS 10.0）は、SCIM エンドポイントが `externalId` をそのまま内部ユーザー UID（`user.uid`）にマッピングしていたため、攻撃者が管理者の UID と一致する `externalId` を持つユーザーを作成することで権限昇格・なりすましが可能になりました。`id` は必ずサービスプロバイダー側で生成・管理してください。
 
 ### 2. `active: false` でのデプロビジョニング設計
 

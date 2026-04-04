@@ -76,15 +76,20 @@ else
 fi
 echo ""
 
-# 未レビュー記事の検出
+# 未レビュー記事の検出（Specs > Articles の優先順でソート）
 # フロントマターに "レビュー済み" タグが含まれないファイルを列挙する
-UNREVIEWED=$(find docs/articles docs/specs -name "*.md" ! -name "index.md" 2>/dev/null \
-  | xargs grep -L "レビュー済み" 2>/dev/null \
-  | sort)
+SPECS_UNREVIEWED=$(find docs/specs -name "*.md" ! -name "index.md" 2>/dev/null \
+  | xargs grep -L "レビュー済み" 2>/dev/null | sort)
+ARTICLES_UNREVIEWED=$(find docs/articles -name "*.md" ! -name "index.md" 2>/dev/null \
+  | xargs grep -L "レビュー済み" 2>/dev/null | sort)
+UNREVIEWED=$(printf '%s\n%s' "$SPECS_UNREVIEWED" "$ARTICLES_UNREVIEWED" | grep -v '^$')
 
 if [ -n "$UNREVIEWED" ]; then
+  NEXT_TARGET=$(echo "$UNREVIEWED" | head -1)
   echo "📋 Unreviewed content (review before writing new articles):"
   echo "$UNREVIEWED" | sed 's/^/  /'
+  echo ""
+  echo "🎯 Next review target: ${NEXT_TARGET}"
 else
   echo "✅ All content reviewed"
 fi

@@ -6,6 +6,7 @@
 !/CNAME
 !/package.json
 !/package-lock.json
+!/README.md
 !/CLAUDE.md
 !/docs/index.md
 !/docs/.vitepress/config.mts

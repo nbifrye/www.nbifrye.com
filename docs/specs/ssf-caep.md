@@ -1,6 +1,8 @@
 ---
 title: "Shared Signals Framework / CAEP — セキュリティシグナルのリアルタイム共有"
 description: OpenID Shared Signals Framework 1.0 と Continuous Access Evaluation Profile (CAEP) 1.0 の技術詳細。ゼロトラスト実現に向けたリアルタイムセキュリティシグナル共有の仕組みを解説します。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -287,7 +289,7 @@ Receiver は受信した SET に対して以下の検証を行う必要があり
 
 ### exp クレームを使ってはならない
 
-SSF の SET では `exp` クレームを **使用してはならない**と明記されています([仕様 Section 4.1.7](https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html#section-4.1))。これは JWT confusion 攻撃（SET を通常の JWT として処理させる攻撃）への防御です。`exp` があると、一般的な JWT ライブラリが有効期限切れ前のセキュリティイベントを「有効なアクセス権限」として誤解釈するリスクがあります。
+SSF の SET では `exp` クレームを **使用してはならない**と明記されています([仕様 Section 4.1.7](https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html#section-4.1.7))。これは JWT confusion 攻撃（SET を通常の JWT として処理させる攻撃）への防御です。`exp` があると、一般的な JWT ライブラリが有効期限切れ前のセキュリティイベントを「有効なアクセス権限」として誤解釈するリスクがあります。
 
 ### Critical Subject Members
 
@@ -339,15 +341,15 @@ sequenceDiagram
 
 ## 関連仕様・後継仕様
 
-| 仕様                                                                                     | 関係                                         |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- |
-| [RFC 8417 — SET](https://www.rfc-editor.org/rfc/rfc8417)                                 | SSF が依存する SET の基本仕様                |
-| [RFC 9493 — Subject Identifiers](https://www.rfc-editor.org/rfc/rfc9493)                 | Subject 識別子の標準化                       |
-| [RFC 8935 — Push Delivery](https://www.rfc-editor.org/rfc/rfc8935)                       | Push 配信の基本プロトコル                    |
-| [RFC 8936 — Poll Delivery](https://www.rfc-editor.org/rfc/rfc8936)                       | Poll 配信の基本プロトコル                    |
-| [OpenID RISC 1.0](https://openid.net/specs/openid-risc-1_0-final.html)                   | SSF のアカウントリスクプロファイル           |
-| [CAEP Interoperability Profile 1.0](https://openid.net/wg/sharedsignals/specifications/) | 実装間の相互運用性を高めるプロファイル       |
-| [NIST SP 800-207](https://csrc.nist.gov/publications/detail/sp/800/207/final)            | ゼロトラストアーキテクチャ（SSF の背景思想） |
+| 仕様                                                                                     | 関係                                                          |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [RFC 8417 — SET](https://www.rfc-editor.org/rfc/rfc8417)                                 | SSF が依存する SET の基本仕様                                 |
+| [RFC 9493 — Subject Identifiers](https://www.rfc-editor.org/rfc/rfc9493)                 | Subject 識別子の標準化                                        |
+| [RFC 8935 — Push Delivery](https://www.rfc-editor.org/rfc/rfc8935)                       | Push 配信の基本プロトコル                                     |
+| [RFC 8936 — Poll Delivery](https://www.rfc-editor.org/rfc/rfc8936)                       | Poll 配信の基本プロトコル                                     |
+| [OpenID RISC 1.0](https://openid.net/specs/openid-risc-1_0-final.html)                   | SSF のアカウントリスクプロファイル                            |
+| [CAEP Interoperability Profile 1.0](https://openid.net/wg/sharedsignals/specifications/) | 実装間の相互運用性を高めるプロファイル（Implementer's Draft） |
+| [NIST SP 800-207](https://csrc.nist.gov/publications/detail/sp/800/207/final)            | ゼロトラストアーキテクチャ（SSF の背景思想）                  |
 
 ## 参考資料
 

@@ -1,7 +1,6 @@
 ---
 description: デジタルアイデンティティ知識ベースを自律的に成長させる — テーマ選定・調査・執筆・レビュー・校正・基盤改善・コミットをすべて行う
 allowed-tools: Read Write Edit Bash Glob Grep WebSearch WebFetch Agent
-context: fork
 ---
 
 # /work — 自律的知識ベース構築

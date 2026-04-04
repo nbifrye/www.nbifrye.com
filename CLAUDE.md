@@ -116,7 +116,6 @@ PostToolUse フックにより、Write/Edit ツール使用後は自動的に実
 
 ## 自律実行の注意事項
 
-- `/work` スキルは `context: fork` で分離実行される
 - 各実行で必ず 1 本のコンテンツを完成させてコミット・プッシュすること
 - 基盤ファイル（CLAUDE.md / topics.md / style-guide.md / config.mts）の改善も同じコミットに含めてよい
 - 実行中に不明点が生じても人間に質問せず、最善判断で進めること

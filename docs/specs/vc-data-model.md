@@ -1,6 +1,8 @@
 ---
 title: Verifiable Credentials Data Model v2.0
 description: W3C勧告として標準化されたデジタルクレデンシャルのコアデータモデル。発行者・保有者・検証者の三者エコシステムを定義し、暗号学的に検証可能な証明書の構造と保護機構を規定する。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -194,7 +196,7 @@ Signature: <ECDSA署名>
 
 JWT方式はWeb PKIエコシステムとの親和性が高く、多くのライブラリが既存のJWT処理を流用できます。ただし、クレデンシャルの内容を変更せずに署名の追加・更新ができないため、Data Integrityのような連鎖署名には不向きです。
 
-SD-JWT（[RFC 9901](https://www.rfc-editor.org/rfc/rfc9901)）を組み合わせることで、JWT形式でも選択的開示が実現できます。これがSD-JWT VCの基盤となります。
+SD-JWT（[RFC 9701](https://www.rfc-editor.org/rfc/rfc9701)）を組み合わせることで、JWT形式でも選択的開示が実現できます。これがSD-JWT VCの基盤となります。
 
 **方式の選択指針**:
 
@@ -284,7 +286,7 @@ VCDM 2.0はデジタルアイデンティティの主要プロジェクトで採
 | [DID Core 1.0](https://www.w3.org/TR/did-core/)                                                                                         | 発行者・主体の識別子として使用         |
 | [VC Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/)                                                                       | 埋め込み型プルーフの詳細仕様           |
 | [VC-JOSE-COSE](https://www.w3.org/TR/vc-jose-cose/)                                                                                     | JWT/COSE形式での保護機構               |
-| [SD-JWT (RFC 9901)](https://www.rfc-editor.org/rfc/rfc9901) / [SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) | JWT形式での選択的開示VC                |
+| [SD-JWT (RFC 9701)](https://www.rfc-editor.org/rfc/rfc9701) / [SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) | JWT形式での選択的開示VC                |
 | [Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/)                                                           | プライバシー保護型の失効リスト         |
 | [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)                                                 | VCDM準拠クレデンシャルの発行プロトコル |
 

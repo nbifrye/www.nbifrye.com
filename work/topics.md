@@ -77,7 +77,7 @@
 | Topic                                                                  | Priority | Score | File(s)                | Last Updated |
 | ---------------------------------------------------------------------- | -------- | ----- | ---------------------- | ------------ |
 | Shared Signals Framework / CAEP                                        | P1       | 3     | docs/specs/ssf-caep.md | 2026-04-04   |
-| IPSIE — Interoperability Profile for Secure Identity in the Enterprise | P1       | 0     | —                      | —            |
+| IPSIE — Interoperability Profile for Secure Identity in the Enterprise | P1       | 3     | docs/specs/ipsie.md    | 2026-04-05   |
 | SCIM 2.0 (RFC 7643 / 7644)                                             | P1       | 3     | docs/specs/scim2.md    | 2026-04-04   |
 | WIMSE — Workload Identity in Multi-System Environments                 | P2       | 0     | —                      | —            |
 | SPIFFE / SPIRE ワークロードアイデンティティ                            | P2       | 0     | —                      | —            |

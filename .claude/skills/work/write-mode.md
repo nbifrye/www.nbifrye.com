@@ -18,7 +18,7 @@ Glob("docs/specs/*.md")    → index.md 以外を抽出
 
 ### 1-2. トピックマトリクスと照合する
 
-`.claude/skills/work/topics.md` を読み、全トピックの Score を確認します。
+`work/topics.md` を読み、全トピックの Score を確認します。
 
 **重複防止チェック**: 既存ファイルのスラッグ（例: `rfc6749`、`oidc-core`）と topics.md の File(s) 列を照合し、
 ファイルは存在するが Score=0 のままのトピックがあれば、この段階で Score を更新してから次に進んでください。
@@ -268,7 +268,7 @@ Agent(subagent_type="Explore", prompt="""
 以下の観点で日本語品質を確認し、必要に応じてファイルを修正してください。
 
 - **文末統一**: 「です・ます」調（敬体）で混在しない
-- **用語統一**: `.claude/skills/work/style-guide.md` の表記ルールに従う（英語表記を維持するもの・日本語訳が確立しているものを確認）
+- **用語統一**: `work/style-guide.md` の表記ルールに従う（英語表記を維持するもの・日本語訳が確立しているものを確認）
 - **句読点**: 読みやすい位置に「、」「。」を使う
 - **文体**: 受動態の多用を避け、能動的な文体を優先
 - **冗長表現**: 同じ内容の繰り返し・余分な接続詞を削除
@@ -279,7 +279,7 @@ Agent(subagent_type="Explore", prompt="""
 
 今回の執筆作業で気づいた改善点を以下のファイルに反映してください。
 
-### `.claude/skills/work/topics.md`
+### `work/topics.md`
 
 - 執筆したトピックの Score を更新（0 → 2 または 3）
   - Spec 記事（単一仕様の詳細解説）→ Score=3
@@ -288,7 +288,7 @@ Agent(subagent_type="Explore", prompt="""
 - Last Updated 列に今日の日付（YYYY-MM-DD）を記入
 - 今回の調査で発見した新しいトピック候補があれば末尾に追加
 
-### `.claude/skills/work/style-guide.md`
+### `work/style-guide.md`
 
 今回使った表現パターンで有用なものをガイドに追記（必要な場合のみ）。
 既存のルールを変更・削除する場合は慎重に。
@@ -322,13 +322,13 @@ npm run docs:build 2>&1
 
 ```bash
 # 今回作成・変更したファイルのみを追加（例）
-git add docs/specs/rfc6749.md .claude/skills/work/topics.md
+git add docs/specs/rfc6749.md work/topics.md
 
 # コミット（記事の内容に合わせてメッセージを変更）
 git commit -m "feat: <トピック名>の記事を追加
 
 - docs/<type>/<filename>.md を新規作成
-- .claude/skills/work/topics.md を更新"
+- work/topics.md を更新"
 
 # main ブランチへの直接 push を試みる
 git push origin HEAD:main

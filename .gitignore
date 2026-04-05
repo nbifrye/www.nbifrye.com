@@ -17,8 +17,8 @@
 !/.claude/hooks/format-md.sh
 !/.claude/hooks/session-start.sh
 !/.claude/skills/work/SKILL.md
-!/.claude/skills/work/topics.md
-!/.claude/skills/work/style-guide.md
+!/work/topics.md
+!/work/style-guide.md
 !/.claude/skills/work/review-mode.md
 !/.claude/skills/work/write-mode.md
 !/.claude/skills/review/SKILL.md

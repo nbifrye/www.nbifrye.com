@@ -43,7 +43,7 @@ docs/
 
 ## 執筆スタイル
 
-詳細は `.claude/skills/work/style-guide.md` を参照。要点:
+詳細は `work/style-guide.md` を参照。要点:
 
 - **言語**: 日本語（技術用語・仕様名・RFC番号はそのまま英語）
 - **視点**: 実装者・専門家の視点。単なる要約ではなく批評・分析・実践的示唆を含む
@@ -88,7 +88,7 @@ PostToolUse フックにより、Write/Edit ツール使用後は自動的に実
 
 ## カバレッジ管理
 
-`.claude/skills/work/topics.md` にトピックマトリクスを管理しています。
+`work/topics.md` にトピックマトリクスを管理しています。
 記事を追加したら、該当行の Score 列を更新し、File(s) と Last Updated を記入してください。
 
 6つのドメイン:

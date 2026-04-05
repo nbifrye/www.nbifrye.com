@@ -31,7 +31,7 @@
 | JWK — JSON Web Key (RFC 7517)                          | P1       | 0     | —                       | —            |
 | JWT Access Token (RFC 9068)                            | P1       | 0     | —                       | —            |
 | JWT-Secured Authorization Request / JAR (RFC 9101)     | P1       | 0     | —                       | —            |
-| Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 0     | —                       | —            |
+| Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 3     | docs/specs/rfc9126.md   | 2026-04-05   |
 | DPoP — Demonstrating Proof of Possession (RFC 9449)    | P1       | 3     | docs/specs/rfc9449.md   | 2026-04-05   |
 | OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 0     | —                       | —            |
 | OpenID Connect Core 1.0                                | P0       | 3     | docs/specs/oidc-core.md | 2026-04-03   |

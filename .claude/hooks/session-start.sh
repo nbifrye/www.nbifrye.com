@@ -9,7 +9,7 @@ if [[ ! -d node_modules ]]; then
   npm install --prefer-offline --no-audit --no-fund 2>&1 | tail -3 >&2
 fi
 
-TOPICS=".claude/skills/work/topics.md"
+TOPICS="work/topics.md"
 
 echo "=== Knowledge Base Session Context ==="
 echo ""

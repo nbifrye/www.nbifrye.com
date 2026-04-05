@@ -8,7 +8,7 @@ allowed-tools: Read Write Edit Bash Glob Grep WebSearch WebFetch Agent
 このスキルは人間の介入なしに完走するよう設計されています。
 不明点があっても人間に質問せず、最善判断で進めてください。
 
-まず `CLAUDE.md` と `.claude/skills/work/style-guide.md` を読んでプロジェクト全体の方針を把握してください。
+まず `CLAUDE.md` と `work/style-guide.md` を読んでプロジェクト全体の方針を把握してください。
 
 ---
 

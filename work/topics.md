@@ -36,7 +36,7 @@
 | OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 0     | —                       | —            |
 | OpenID Connect Core 1.0                                | P0       | 3     | docs/specs/oidc-core.md | 2026-04-03   |
 | OpenID Connect Discovery 1.0                           | P1       | 0     | —                       | —            |
-| FAPI 2.0 Security Profile                              | P1       | 0     | —                       | —            |
+| FAPI 2.0 Security Profile                              | P1       | 3     | docs/specs/fapi2.md     | 2026-04-05   |
 | OpenID for Verifiable Credential Issuance (OID4VCI)    | P0       | 3     | docs/specs/oid4vci.md   | 2026-04-03   |
 | OpenID for Verifiable Presentations (OID4VP)           | P0       | 3     | docs/specs/oid4vp.md    | 2026-04-03   |
 | Self-Issued OpenID Provider v2 (SIOPv2)                | P1       | 0     | —                       | —            |

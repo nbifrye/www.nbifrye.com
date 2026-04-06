@@ -25,7 +25,7 @@
 | Topic                                                  | Priority | Score | File(s)                 | Last Updated |
 | ------------------------------------------------------ | -------- | ----- | ----------------------- | ------------ |
 | OAuth 2.0 Authorization Framework (RFC 6749)           | P0       | 3     | docs/specs/rfc6749.md   | 2026-04-03   |
-| OAuth 2.0 Bearer Token (RFC 6750)                      | P1       | 0     | —                       | —            |
+| OAuth 2.0 Bearer Token (RFC 6750)                      | P1       | 3     | docs/specs/rfc6750.md   | 2026-04-06   |
 | PKCE — Proof Key for Code Exchange (RFC 7636)          | P1       | 3     | docs/specs/rfc7636.md   | 2026-04-04   |
 | JWT — JSON Web Token (RFC 7519)                        | P0       | 3     | docs/specs/rfc7519.md   | 2026-04-03   |
 | JWK — JSON Web Key (RFC 7517)                          | P1       | 0     | —                       | —            |

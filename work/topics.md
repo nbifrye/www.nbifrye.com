@@ -92,7 +92,7 @@
 | Zero Knowledge Proofs × デジタルアイデンティティ  | P1       | 2     | docs/articles/2026-04-06-zkp-digital-identity.md            | 2026-04-06   |
 | AI エージェントのアイデンティティ課題             | P0       | 2     | docs/articles/2026-04-03-ai-agents-identity.md              | 2026-04-03   |
 | mDL — Mobile Driver's License (ISO 18013-5)       | P1       | 3     | docs/specs/iso18013-5.md                                    | 2026-04-05   |
-| Privacy-Preserving Credentials（BBS+、AnonCreds） | P1       | 0     | —                                                           | —            |
+| Privacy-Preserving Credentials（BBS+、AnonCreds） | P1       | 2     | docs/articles/2026-04-07-privacy-preserving-credentials.md  | 2026-04-07   |
 | 選択的開示（Selective Disclosure）技術比較        | P1       | 2     | docs/articles/2026-04-07-selective-disclosure-comparison.md | 2026-04-07   |
 
 ---

@@ -61,14 +61,14 @@
 
 ## Domain 3: Regulatory
 
-| Topic                                                 | Priority | Score | File(s)                                        | Last Updated |
-| ----------------------------------------------------- | -------- | ----- | ---------------------------------------------- | ------------ |
-| eIDAS 2.0 と EUDI Wallet アーキテクチャ               | P0       | 2     | docs/articles/2026-04-03-eidas2-eudi-wallet.md | 2026-04-03   |
-| NIST SP 800-63-4 デジタルアイデンティティガイドライン | P0       | 3     | docs/specs/nist-sp-800-63-4.md                 | 2026-04-03   |
-| 日本のデジタル社会形成基本法                          | P1       | 0     | —                                              | —            |
-| マイナンバー法改正 (2024)                             | P1       | 2     | docs/articles/2026-04-07-mynumber-law-2024.md  | 2026-04-07   |
-| 犯収法改正と eKYC                                     | P1       | 2     | docs/articles/2026-04-05-hanzaishueki-ekyc.md  | 2026-04-05   |
-| GDPR とデジタルアイデンティティ                       | P2       | 0     | —                                              | —            |
+| Topic                                                 | Priority | Score | File(s)                                               | Last Updated |
+| ----------------------------------------------------- | -------- | ----- | ----------------------------------------------------- | ------------ |
+| eIDAS 2.0 と EUDI Wallet アーキテクチャ               | P0       | 2     | docs/articles/2026-04-03-eidas2-eudi-wallet.md        | 2026-04-03   |
+| NIST SP 800-63-4 デジタルアイデンティティガイドライン | P0       | 3     | docs/specs/nist-sp-800-63-4.md                        | 2026-04-03   |
+| 日本のデジタル社会形成基本法                          | P1       | 2     | docs/articles/2026-04-07-digital-society-basic-act.md | 2026-04-07   |
+| マイナンバー法改正 (2024)                             | P1       | 2     | docs/articles/2026-04-07-mynumber-law-2024.md         | 2026-04-07   |
+| 犯収法改正と eKYC                                     | P1       | 2     | docs/articles/2026-04-05-hanzaishueki-ekyc.md         | 2026-04-05   |
+| GDPR とデジタルアイデンティティ                       | P2       | 0     | —                                                     | —            |
 
 ---
 

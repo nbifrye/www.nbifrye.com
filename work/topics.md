@@ -22,25 +22,25 @@
 
 ## Domain 1: OpenID Standards
 
-| Topic                                                  | Priority | Score | File(s)                      | Last Updated |
-| ------------------------------------------------------ | -------- | ----- | ---------------------------- | ------------ |
-| OAuth 2.0 Authorization Framework (RFC 6749)           | P0       | 3     | docs/specs/rfc6749.md        | 2026-04-03   |
-| OAuth 2.0 Bearer Token (RFC 6750)                      | P1       | 3     | docs/specs/rfc6750.md        | 2026-04-06   |
-| PKCE — Proof Key for Code Exchange (RFC 7636)          | P1       | 3     | docs/specs/rfc7636.md        | 2026-04-04   |
-| JWT — JSON Web Token (RFC 7519)                        | P0       | 3     | docs/specs/rfc7519.md        | 2026-04-03   |
-| JWK — JSON Web Key (RFC 7517)                          | P1       | 3     | docs/specs/rfc7517.md        | 2026-04-06   |
-| JWT Access Token (RFC 9068)                            | P1       | 3     | docs/specs/rfc9068.md        | 2026-04-07   |
-| JWT-Secured Authorization Request / JAR (RFC 9101)     | P1       | 3     | docs/specs/rfc9101.md        | 2026-04-07   |
-| Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 3     | docs/specs/rfc9126.md        | 2026-04-05   |
-| DPoP — Demonstrating Proof of Possession (RFC 9449)    | P1       | 3     | docs/specs/rfc9449.md        | 2026-04-05   |
-| OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 3     | docs/specs/rfc9396.md        | 2026-04-07   |
-| OpenID Connect Core 1.0                                | P0       | 3     | docs/specs/oidc-core.md      | 2026-04-03   |
-| OpenID Connect Discovery 1.0                           | P1       | 3     | docs/specs/oidc-discovery.md | 2026-04-07   |
-| FAPI 2.0 Security Profile                              | P1       | 3     | docs/specs/fapi2.md          | 2026-04-05   |
-| OpenID for Verifiable Credential Issuance (OID4VCI)    | P0       | 3     | docs/specs/oid4vci.md        | 2026-04-03   |
-| OpenID for Verifiable Presentations (OID4VP)           | P0       | 3     | docs/specs/oid4vp.md         | 2026-04-03   |
-| Self-Issued OpenID Provider v2 (SIOPv2)                | P1       | 3     | docs/specs/siop-v2.md        | 2026-04-07   |
-| OpenID Federation 1.0                                  | P1       | 0     | —                            | —            |
+| Topic                                                  | Priority | Score | File(s)                         | Last Updated |
+| ------------------------------------------------------ | -------- | ----- | ------------------------------- | ------------ |
+| OAuth 2.0 Authorization Framework (RFC 6749)           | P0       | 3     | docs/specs/rfc6749.md           | 2026-04-03   |
+| OAuth 2.0 Bearer Token (RFC 6750)                      | P1       | 3     | docs/specs/rfc6750.md           | 2026-04-06   |
+| PKCE — Proof Key for Code Exchange (RFC 7636)          | P1       | 3     | docs/specs/rfc7636.md           | 2026-04-04   |
+| JWT — JSON Web Token (RFC 7519)                        | P0       | 3     | docs/specs/rfc7519.md           | 2026-04-03   |
+| JWK — JSON Web Key (RFC 7517)                          | P1       | 3     | docs/specs/rfc7517.md           | 2026-04-06   |
+| JWT Access Token (RFC 9068)                            | P1       | 3     | docs/specs/rfc9068.md           | 2026-04-07   |
+| JWT-Secured Authorization Request / JAR (RFC 9101)     | P1       | 3     | docs/specs/rfc9101.md           | 2026-04-07   |
+| Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 3     | docs/specs/rfc9126.md           | 2026-04-05   |
+| DPoP — Demonstrating Proof of Possession (RFC 9449)    | P1       | 3     | docs/specs/rfc9449.md           | 2026-04-05   |
+| OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 3     | docs/specs/rfc9396.md           | 2026-04-07   |
+| OpenID Connect Core 1.0                                | P0       | 3     | docs/specs/oidc-core.md         | 2026-04-03   |
+| OpenID Connect Discovery 1.0                           | P1       | 3     | docs/specs/oidc-discovery.md    | 2026-04-07   |
+| FAPI 2.0 Security Profile                              | P1       | 3     | docs/specs/fapi2.md             | 2026-04-05   |
+| OpenID for Verifiable Credential Issuance (OID4VCI)    | P0       | 3     | docs/specs/oid4vci.md           | 2026-04-03   |
+| OpenID for Verifiable Presentations (OID4VP)           | P0       | 3     | docs/specs/oid4vp.md            | 2026-04-03   |
+| Self-Issued OpenID Provider v2 (SIOPv2)                | P1       | 3     | docs/specs/siop-v2.md           | 2026-04-07   |
+| OpenID Federation 1.0                                  | P1       | 3     | docs/specs/openid-federation.md | 2026-04-07   |
 
 ---
 

@@ -33,7 +33,7 @@
 | JWT-Secured Authorization Request / JAR (RFC 9101)     | P1       | 3     | docs/specs/rfc9101.md   | 2026-04-07   |
 | Pushed Authorization Requests / PAR (RFC 9126)         | P1       | 3     | docs/specs/rfc9126.md   | 2026-04-05   |
 | DPoP — Demonstrating Proof of Possession (RFC 9449)    | P1       | 3     | docs/specs/rfc9449.md   | 2026-04-05   |
-| OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 0     | —                       | —            |
+| OAuth 2.0 Rich Authorization Requests / RAR (RFC 9396) | P1       | 3     | docs/specs/rfc9396.md   | 2026-04-07   |
 | OpenID Connect Core 1.0                                | P0       | 3     | docs/specs/oidc-core.md | 2026-04-03   |
 | OpenID Connect Discovery 1.0                           | P1       | 0     | —                       | —            |
 | FAPI 2.0 Security Profile                              | P1       | 3     | docs/specs/fapi2.md     | 2026-04-05   |

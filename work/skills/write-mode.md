@@ -1,6 +1,6 @@
 # 執筆モード
 
-このファイルは `.claude/skills/work/SKILL.md` の Step 0 から参照されます。
+このファイルは `work/skills/SKILL.md` の Step 0 から参照されます。
 すべてのコンテンツがレビュー済みの場合に Step 1〜9 を順に実行してください。
 
 ---

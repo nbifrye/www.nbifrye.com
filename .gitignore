@@ -14,12 +14,13 @@
 !/docs/articles/*.md
 !/docs/specs/*.md
 !/.claude/settings.json
-!/.claude/hooks/format-md.sh
-!/.claude/hooks/session-start.sh
 !/.claude/skills/work/SKILL.md
 !/work/topics.md
 !/work/style-guide.md
-!/.claude/skills/work/review-mode.md
-!/.claude/skills/work/write-mode.md
+!/work/hooks/session-start.sh
+!/work/hooks/format-md.sh
+!/work/skills/SKILL.md
+!/work/skills/review-mode.md
+!/work/skills/write-mode.md
 !/.claude/skills/review/SKILL.md
 !/.github/workflows/deploy.yml

@@ -1,6 +1,6 @@
 # レビューモード
 
-このファイルは `.claude/skills/work/SKILL.md` の Step 0 から参照されます。
+このファイルは `work/skills/SKILL.md` の Step 0 から参照されます。
 未レビュー記事がある場合に Step R1〜R6 を順に実行してください。
 
 ---

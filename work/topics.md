@@ -107,4 +107,4 @@
 | Apple / Google のパスキー戦略                            | P1       | 0     | —                                                      | —            |
 | 日本のフィンテック eKYC 動向                             | P1       | 0     | —                                                      | —            |
 | マイナカードのデジタル活用（健康保険証・運転免許証統合） | P1       | 2     | docs/articles/2026-04-06-myna-digital-use.md           | 2026-04-06   |
-| 日本のパスキー普及戦略                                   | P1       | 0     | —                                                      | —            |
+| 日本のパスキー普及戦略                                   | P1       | 2     | docs/articles/2026-04-07-japan-passkey-strategy.md     | 2026-04-07   |

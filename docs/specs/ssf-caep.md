@@ -1,6 +1,8 @@
 ---
 title: "Shared Signals Framework / CAEP — セキュリティシグナルのリアルタイム共有"
 description: OpenID Shared Signals Framework 1.0 と Continuous Access Evaluation Profile (CAEP) 1.0 の技術詳細。ゼロトラスト実現に向けたリアルタイムセキュリティシグナル共有の仕組みを解説します。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -9,7 +11,7 @@ description: OpenID Shared Signals Framework 1.0 と Continuous Access Evaluatio
 
 ## 概要
 
-**Shared Signals Framework (SSF)** は、複数の独立したシステム間でセキュリティシグナルをリアルタイムに共有するための OpenID Foundation 仕様です。2025 年 9 月に [OpenID Shared Signals Framework 1.0](https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html) として Final 仕様となりました。
+**Shared Signals Framework (SSF)** は、複数の独立したシステム間でセキュリティシグナルをリアルタイムに共有するための OpenID Foundation 仕様です。2025 年 8 月 29 日に公開され、同年 9 月 2 日に OpenID Foundation により [OpenID Shared Signals Framework 1.0](https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html) として Final 仕様が正式承認されました。
 
 従来の認証・認可モデルでは、ユーザーがサービスにログインした時点でセッションが確立され、その後の状態変化（パスワード変更、デバイス紛失、アカウント乗っ取り）がリアルタイムに他のサービスへ伝播しません。SSF はこの問題を解決するため、Security Event Token (SET) を使ったイベント配信メカニズムを標準化します。
 
@@ -179,7 +181,7 @@ Content-Type: application/json
 
 ## CAEP イベント詳解
 
-CAEP は以下のイベントタイプを定義します。基底 URI は `https://schemas.openid.net/secevent/caep/event-type/` です([仕様](https://openid.net/specs/openid-caep-1_0-final.html))。
+CAEP は 8 種類のイベントタイプを定義します。以下では主要な 6 種類を解説します。基底 URI は `https://schemas.openid.net/secevent/caep/event-type/` です([仕様](https://openid.net/specs/openid-caep-1_0-final.html))。その他 `token-claims-change`（トークンクレームの変更通知）と `risk-level-change`（リスクレベルの変化通知）も定義されています。
 
 ### session-revoked
 
@@ -314,7 +316,7 @@ SSF / CAEP は主要なエンタープライズアイデンティティベンダ
 | **Jamf**                | Transmitter            | デバイスコンプライアンスシグナルを送信                              |
 | **SailPoint**           | Receiver               | IGA（Identity Governance）システムとして受信                        |
 
-2025 年 3 月の Gartner IAM Summit London では、これらベンダー間での実際の相互運用性デモが行われ、仕様の実用性が実証されました。
+CAEP Interoperability Profile 1.0（Implementer's Draft）の策定を通じて、これらベンダー間の相互運用性確保が進んでいます。
 
 ## ゼロトラストとの関係
 

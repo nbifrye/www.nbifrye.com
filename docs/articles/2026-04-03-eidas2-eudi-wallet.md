@@ -2,6 +2,8 @@
 title: eIDAS 2.0とEUDI Wallet：欧州デジタルアイデンティティ基盤の全体像
 description: Regulation (EU) 2024/1183（eIDAS 2.0）の規制要件と、EUDI Wallet Architecture Reference Framework（ARF）の技術アーキテクチャを解説する。SD-JWT VC・mdoc・OID4VCI/OID4VPの採用背景とトレードオフを含む。
 date: 2026-04-03
+tags:
+  - レビュー済み
 ---
 
 > **Note:** この記事はAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。

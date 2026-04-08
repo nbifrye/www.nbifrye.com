@@ -1,6 +1,8 @@
 ---
 title: "Shared Signals Framework / CAEP — セキュリティシグナルのリアルタイム共有"
 description: OpenID Shared Signals Framework 1.0 と Continuous Access Evaluation Profile (CAEP) 1.0 の技術詳細。ゼロトラスト実現に向けたリアルタイムセキュリティシグナル共有の仕組みを解説します。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。

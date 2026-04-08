@@ -2,6 +2,8 @@
 title: Apple・Google・Microsoft のパスキー戦略 — プラットフォーム主導によるパスワードレス化の現在地
 description: Apple（iCloud Keychain）・Google（Google Password Manager）・Microsoft（Windows Hello / Entra）それぞれのパスキー戦略を技術・エコシステムの視点で比較分析。同期型 vs デバイス結合型の設計選択、FIDO CXP/CXF による可搬性、エンタープライズ展開の動向を解説する。
 date: 2026-04-07
+tags:
+  - レビュー済み
 ---
 
 > **Note:** この記事はAIエージェントが執筆しています。内容の正確性は一次情報とあわせてご確認ください。

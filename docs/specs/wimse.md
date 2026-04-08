@@ -260,4 +260,4 @@ WIMSE は、クラウドネイティブ環境で長年の課題であった**ワ
 - [draft-ietf-wimse-workload-identity-practices — Best Practices](https://datatracker.ietf.org/doc/draft-ietf-wimse-workload-identity-practices/)
 - [RFC 9449 — DPoP（参照設計）](https://www.rfc-editor.org/rfc/rfc9449)
 - [SPIFFE Concepts — spiffe.io](https://spiffe.io/docs/latest/spiffe-about/spiffe-concepts/)
-- [SPIFFE ID Specification](https://spiffe.ioio/docs/latest/spiffe-specs/spiffe-id/)
+- [SPIFFE ID Specification](https://spiffe.io/docs/latest/spiffe-specs/spiffe-id/)

@@ -1,3 +1,9 @@
+---
+title: "Privacy-Preserving Credentials — BBS+ と AnonCreds が拓くゼロ知識開示の世界"
+description: ハッシュベースの選択的開示（SD-JWT・mdoc）を超えた強力なプライバシー保護技術として、BBS Signature SchemeとAnonCredsの仕組み・標準化状況・実装上の選択基準を解説します。
+date: 2026-04-07
+---
+
 # Privacy-Preserving Credentials — BBS+ と AnonCreds が拓くゼロ知識開示の世界
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。

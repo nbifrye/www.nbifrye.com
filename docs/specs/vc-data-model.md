@@ -141,7 +141,42 @@ Verifiable Presentation（VP）は、保有者が1つ以上のVerifiable Credent
 }
 ```
 
-VPへの署名はHolderが行い、「この資格情報を自分が提示している」という証明になります。VPは検証者への提示ごとに新規生成することで、リプレイ攻撃を防止できます。
+VPへの署名はHolderが行い、「この資格情報を自分が提示している」という証明になります。
+
+#### Holder Binding とリプレイ攻撃防止
+
+実際のプレゼンテーションでは、検証者が **nonce**（チャレンジ）を提供し、VP の proof にその値を含めることで特定の検証セッションへの結びつけを行います。
+
+```json
+{
+  "@context": ["https://www.w3.org/ns/credentials/v2"],
+  "type": ["VerifiablePresentation"],
+  "holder": "did:example:ebfeb1f712ebc6f1c276e12ec21",
+  "verifiableCredential": ["（省略）"],
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "ecdsa-rdfc-2019",
+    "created": "2024-03-15T09:10:00Z",
+    "verificationMethod": "did:example:ebfeb1f712ebc6f1c276e12ec21#key-1",
+    "proofPurpose": "authentication",
+    "challenge": "3182bdea-63d9-11e8-acd0-6ed0d41d340d",
+    "domain": "https://verifier.example.com",
+    "proofValue": "z4oey5q2M..."
+  }
+}
+```
+
+- `challenge`: 検証者が提供した一時値。同じ VP の別セッションへの再利用（リプレイ攻撃）を防止する
+- `domain`: 提示先の検証者 URI。他の検証者へのリプレイも防止する
+- `proofPurpose: "authentication"`: VC への署名（`assertionMethod`）と VP への署名を意味的に区別する
+
+VPは検証者への提示ごとに新規生成することが原則であり、同一の VP を使い回すことは安全ではありません（[VCDM 2.0 §6.1](https://www.w3.org/TR/vc-data-model-2.0/#presentations-0)）。
+
+#### OID4VP における VP の位置づけ
+
+OpenID for Verifiable Presentations（OID4VP）では、VP は `vp_token` として HTTP レスポンスで転送されます。Data Integrity 形式では JSON-LD ドキュメントがそのまま `vp_token` として渡され、JWT 形式では VP 全体を JWT ペイロードに包む形式が定義されています。`presentation_submission` クレームが VP 内の VC と検証者の要求（Input Descriptor）の対応関係を記述します。
+
+> 詳細は [OpenID for Verifiable Presentations](./oid4vp.md) を参照してください。
 
 ## 保護機構（Securing Mechanisms）
 
@@ -194,7 +229,7 @@ Signature: <ECDSA署名>
 
 JWT方式はWeb PKIエコシステムとの親和性が高く、多くのライブラリが既存のJWT処理を流用できます。ただし、クレデンシャルの内容を変更せずに署名の追加・更新ができないため、Data Integrityのような連鎖署名には不向きです。
 
-SD-JWT（[RFC 9701](https://www.rfc-editor.org/rfc/rfc9701)）を組み合わせることで、JWT形式でも選択的開示が実現できます。これがSD-JWT VCの基盤となります。
+SD-JWT（[RFC 9901](https://www.rfc-editor.org/rfc/rfc9901)）を組み合わせることで、JWT形式でも選択的開示が実現できます。これがSD-JWT VCの基盤となります。
 
 **方式の選択指針**:
 
@@ -284,7 +319,7 @@ VCDM 2.0はデジタルアイデンティティの主要プロジェクトで採
 | [DID Core 1.0](https://www.w3.org/TR/did-core/)                                                                                         | 発行者・主体の識別子として使用         |
 | [VC Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/)                                                                       | 埋め込み型プルーフの詳細仕様           |
 | [VC-JOSE-COSE](https://www.w3.org/TR/vc-jose-cose/)                                                                                     | JWT/COSE形式での保護機構               |
-| [SD-JWT (RFC 9701)](https://www.rfc-editor.org/rfc/rfc9701) / [SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) | JWT形式での選択的開示VC                |
+| [SD-JWT (RFC 9901)](https://www.rfc-editor.org/rfc/rfc9901) / [SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) | JWT形式での選択的開示VC                |
 | [Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/)                                                           | プライバシー保護型の失効リスト         |
 | [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)                                                 | VCDM準拠クレデンシャルの発行プロトコル |
 

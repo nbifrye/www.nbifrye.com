@@ -1,6 +1,8 @@
 ---
 title: Self-Issued OpenID Provider v2 (SIOPv2)
 description: ユーザー自身がOpenID Providerとなり、中央集権的なIdPに依存しない認証を実現する仕様。DIDまたはJWK Thumbprintをsub値として用い、ウォレットアプリが直接ID Tokenに署名する。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -11,7 +13,7 @@ description: ユーザー自身がOpenID Providerとなり、中央集権的なI
 
 Self-Issued OpenID Provider v2（SIOPv2）は、ユーザー自身のデバイス（ウォレットアプリ）が OpenID Provider（OP）の役割を担う仕様です。Google・Microsoft のような中央集権的な IdP に依存せず、ユーザーが自分の暗号鍵で ID Token に署名し、Relying Party（RP）に直接提示します。
 
-仕様は OpenID Connect Working Group が DIF（分散 ID 財団）との liaison で開発しており、2022 年 2 月に最初の Implementer's Draft（ID1）が承認、現在は draft 13（2023 年 11 月）まで進んでいます（[SIOPv2 draft 13](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html)）。
+仕様は OpenID Connect Working Group が DIF（分散 ID 財団）との liaison で開発しており、2022 年 2 月に最初の Implementer's Draft（ID1）が承認、2023 年 11 月時点で draft 13 まで進んでいます（[SIOPv2 draft 13](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html)）。
 
 SIOPv2 単体ではユーザー認証（本人確認）を担い、第三者発行クレデンシャルの提示には OpenID for Verifiable Presentations（OID4VP）と組み合わせます。この二仕様を組み合わせることで、EUDI Wallet のような自己主権型アイデンティティ（SSI）エコシステムの基盤が構成されます。
 
@@ -96,7 +98,7 @@ siopv2://?client_id=https://verifier.example.com/cb
 
 ### 認可リクエストのパラメーター
 
-RP から Wallet へ送る認可リクエストの主要パラメーターを示します（[SIOPv2 Section 5](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html#section-5)）。
+RP から Wallet へ送る認可リクエストの主要パラメーターを示します（[SIOPv2 Section 9](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html#section-9)）。
 
 | パラメーター      | 必須 | 説明                                                                           |
 | ----------------- | ---- | ------------------------------------------------------------------------------ |
@@ -123,7 +125,7 @@ SIOPv2 独自のパラメーターで、RP が期待する ID Token の種類を
 
 ### `sub` の識別子型
 
-SIOPv2 の `sub` は 2 種類の方式をサポートします（[Section 6](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html#section-6)）。
+SIOPv2 の `sub` は 2 種類の方式をサポートします（[Section 8](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html#section-8)）。
 
 | 種別                     | `sub` の値                                                 | 備考                                        |
 | ------------------------ | ---------------------------------------------------------- | ------------------------------------------- |
@@ -147,7 +149,7 @@ response_type=vp_token id_token
 
 ### クロスデバイスリプレイ攻撃（重要）
 
-**仕様はこの攻撃を「現在デプロイされている技術では完全には防止できない」と明示しています**（[Section 15.1](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html#section-15.1)）。攻撃のシナリオは次のとおりです。攻撃者が正規 RP の QR コードをコピーして自サイトに掲示し、被害者がスキャンすると、攻撃者のセッションに被害者の認証が紐付けられます。
+**仕様はこの攻撃を「現在デプロイされている技術では完全には防止できない」と明示しています**（[Section 13.3](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html#section-13.3)）。攻撃のシナリオは次のとおりです。攻撃者が正規 RP の QR コードをコピーして自サイトに掲示し、被害者がスキャンすると、攻撃者のセッションに被害者の認証が紐付けられます。
 
 緩和策:
 

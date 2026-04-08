@@ -79,7 +79,7 @@
 | Shared Signals Framework / CAEP                                        | P1       | 3     | docs/specs/ssf-caep.md                                 | 2026-04-04   |
 | IPSIE — Interoperability Profile for Secure Identity in the Enterprise | P1       | 3     | docs/specs/ipsie.md                                    | 2026-04-05   |
 | SCIM 2.0 (RFC 7643 / 7644)                                             | P1       | 3     | docs/specs/scim2.md                                    | 2026-04-04   |
-| WIMSE — Workload Identity in Multi-System Environments                 | P2       | 3     | docs/specs/wimse.md                                    | 2026-04-07   |
+| WIMSE — Workload Identity in Multi-System Environments                 | P2       | 3     | docs/specs/wimse.md                                    | 2026-04-08   |
 | SPIFFE / SPIRE ワークロードアイデンティティ                            | P2       | 0     | —                                                      | —            |
 | ワークロードアイデンティティのパターン                                 | P1       | 2     | docs/articles/2026-04-07-workload-identity-patterns.md | 2026-04-07   |
 

@@ -1,6 +1,8 @@
 ---
 title: SD-JWT-based Verifiable Digital Credentials (SD-JWT VC)
 description: JWTと選択的開示を組み合わせたデジタルクレデンシャル形式。EUDI WalletやOID4VCIエコシステムの標準クレデンシャルフォーマットとして採用され、プライバシー保護と軽量実装を両立する。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -283,7 +285,7 @@ sequenceDiagram
 
 ### 1. ソルト値のエントロピー
 
-Disclosure のソルト値は、クレームごとに**一意**でなければならず、128ビット以上の暗号学的に安全な乱数から生成した base64url 値を推奨しています（[RFC 9901 Section 11.3](https://www.rfc-editor.org/rfc/rfc9901#section-11.3)）。
+Disclosure のソルト値は、クレームごとに**一意**でなければならず、128ビット以上の暗号学的に安全な乱数から生成した base64url 値を推奨しています（[RFC 9901 Section 9.3](https://www.rfc-editor.org/rfc/rfc9901#section-9.3)）。
 
 ソルトが予測可能だと、検証者が同一クレームを異なる提示間で相関付けられるプライバシーリスクがあります。
 

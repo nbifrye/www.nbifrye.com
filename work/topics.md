@@ -41,6 +41,7 @@
 | OpenID for Verifiable Presentations (OID4VP)           | P0       | 3     | docs/specs/oid4vp.md            | 2026-04-03   |
 | Self-Issued OpenID Provider v2 (SIOPv2)                | P1       | 3     | docs/specs/siop-v2.md           | 2026-04-07   |
 | OpenID Federation 1.0                                  | P1       | 3     | docs/specs/openid-federation.md | 2026-04-07   |
+| OAuth 2.0 Security Best Current Practice (RFC 9700)    | P1       | 3     | docs/specs/rfc9700.md           | 2026-04-08   |
 
 ---
 

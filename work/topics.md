@@ -68,7 +68,7 @@
 | 日本のデジタル社会形成基本法                          | P1       | 2     | docs/articles/2026-04-07-digital-society-basic-act.md | 2026-04-07   |
 | マイナンバー法改正 (2024)                             | P1       | 2     | docs/articles/2026-04-07-mynumber-law-2024.md         | 2026-04-07   |
 | 犯収法改正と eKYC                                     | P1       | 2     | docs/articles/2026-04-05-hanzaishueki-ekyc.md         | 2026-04-05   |
-| GDPR とデジタルアイデンティティ                       | P2       | 0     | —                                                     | —            |
+| GDPR とデジタルアイデンティティ                       | P2       | 2     | docs/articles/2026-04-08-gdpr-digital-identity.md     | 2026-04-08   |
 
 ---
 

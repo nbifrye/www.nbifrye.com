@@ -1,6 +1,8 @@
 ---
 title: "WIMSE — Workload Identity in Multi-System Environments"
 description: IETF WIMSE WG が標準化中のワークロードアイデンティティフレームワーク。コンテナ・サーバーレス・マイクロサービスが安全にサービス間通信を行うための JWT ベースのトークン（WIT/WPT）と SPIFFE との関係を解説する。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。

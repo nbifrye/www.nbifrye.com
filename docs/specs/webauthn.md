@@ -1,6 +1,8 @@
 ---
 title: Web Authentication (WebAuthn) Level 3
 description: パスワードレス認証を実現する W3C 標準。公開鍵暗号とデバイス組み込みの認証器を使い、フィッシング耐性のある強力な認証を Web アプリケーションに提供します。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -340,6 +342,18 @@ if (caps.passkeyPlatformAuthenticator) {
   // ハードウェアセキュリティキーフローにフォールバック
 }
 ```
+
+#### Related Origins（関連オリジン）
+
+Level 3 で追加されたもう一つの機能が **Related Origins** です。`getClientCapabilities()` の `relatedOrigins` フラグが `true` の環境では、RP は `/.well-known/webauthn` に JSON を配置することで、関連ドメイン間でのクレデンシャル共有を宣言できます。
+
+```json
+{
+  "origins": ["https://app.example.com", "https://accounts.example.com"]
+}
+```
+
+これにより `example.com` で登録したクレデンシャルを `app.example.com` からも利用できるようになります。異なるドメインを持つ同一企業のサービス（例: `shop.example.com` と `id.example.com`）で Passkey を統一管理する際に有効です。ただし、許可するオリジンは同一エンティティが管理するドメインに限定し、広範な許可設定はフィッシングリスクを高める点に注意が必要です。
 
 ---
 

@@ -54,7 +54,7 @@
 | DID Methods 概観                                 | P1       | 1     | docs/specs/did-core.md      | 2026-04-03   |
 | Web Authentication (WebAuthn) Level 3            | P0       | 3     | docs/specs/webauthn.md      | 2026-04-03   |
 | SD-JWT Verifiable Credentials (SD-JWT VC)        | P0       | 3     | docs/specs/sd-jwt-vc.md     | 2026-04-03   |
-| Selective Disclosure for JWTs (SD-JWT, RFC 9901) | P1       | 1     | docs/specs/sd-jwt-vc.md     | 2026-04-03   |
+| Selective Disclosure for JWTs (SD-JWT, RFC 9901) | P1       | 3     | docs/specs/rfc9901.md       | 2026-04-08   |
 | CBOR / COSE                                      | P1       | 3     | docs/specs/cbor-cose.md     | 2026-04-07   |
 
 ---

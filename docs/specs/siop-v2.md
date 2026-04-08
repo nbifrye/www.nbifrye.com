@@ -1,8 +1,6 @@
 ---
 title: Self-Issued OpenID Provider v2 (SIOPv2)
 description: ユーザー自身がOpenID Providerとなり、中央集権的なIdPに依存しない認証を実現する仕様。DIDまたはJWK Thumbprintをsub値として用い、ウォレットアプリが直接ID Tokenに署名する。
-tags:
-  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。

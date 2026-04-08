@@ -1,8 +1,6 @@
 ---
 title: OpenID Federation 1.0
 description: 複数の組織にまたがる OpenID Provider と Relying Party の信頼関係を、Trust Chain と Entity Statement によって自動的に確立するフェデレーション仕様。事前の二者間契約を不要とし、大規模なアイデンティティエコシステムを実現する。
-tags:
-  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。

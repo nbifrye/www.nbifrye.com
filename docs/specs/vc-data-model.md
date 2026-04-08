@@ -1,6 +1,8 @@
 ---
 title: Verifiable Credentials Data Model v2.0
 description: W3C勧告として標準化されたデジタルクレデンシャルのコアデータモデル。発行者・保有者・検証者の三者エコシステムを定義し、暗号学的に検証可能な証明書の構造と保護機構を規定する。
+tags:
+  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
@@ -254,7 +256,7 @@ SD-JWT（[RFC 9901](https://www.rfc-editor.org/rfc/rfc9901)）を組み合わせ
 }
 ```
 
-BitString Status Listの仕組み:
+Bitstring Status Listの仕組み:
 
 1. 発行者はビット列（最低131,072ビット）をStatusListCredentialとして公開する
 2. 各クレデンシャルは`statusListIndex`でビット列中の位置を指定する
@@ -314,14 +316,14 @@ VCDM 2.0はデジタルアイデンティティの主要プロジェクトで採
 
 ## 関連仕様・後継仕様
 
-| 仕様                                                                                                                                    | 関係                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| [DID Core 1.0](https://www.w3.org/TR/did-core/)                                                                                         | 発行者・主体の識別子として使用         |
-| [VC Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/)                                                                       | 埋め込み型プルーフの詳細仕様           |
-| [VC-JOSE-COSE](https://www.w3.org/TR/vc-jose-cose/)                                                                                     | JWT/COSE形式での保護機構               |
-| [SD-JWT (RFC 9901)](https://www.rfc-editor.org/rfc/rfc9901) / [SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) | JWT形式での選択的開示VC                |
-| [Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/)                                                           | プライバシー保護型の失効リスト         |
-| [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)                                                 | VCDM準拠クレデンシャルの発行プロトコル |
+| 仕様                                                                                                                                                     | 関係                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| [DID Core 1.0](https://www.w3.org/TR/did-core/)                                                                                                          | 発行者・主体の識別子として使用         |
+| [VC Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/)                                                                                        | 埋め込み型プルーフの詳細仕様           |
+| [VC-JOSE-COSE](https://www.w3.org/TR/vc-jose-cose/)                                                                                                      | JWT/COSE形式での保護機構               |
+| [SD-JWT (RFC 9901)](https://www.rfc-editor.org/rfc/rfc9901) / [SD-JWT VC (Internet-Draft)](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) | JWT形式での選択的開示VC                |
+| [Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/)                                                                            | プライバシー保護型の失効リスト         |
+| [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)                                                                  | VCDM準拠クレデンシャルの発行プロトコル |
 
 ## 参考資料
 
@@ -331,3 +333,4 @@ VCDM 2.0はデジタルアイデンティティの主要プロジェクトで採
 - [Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/)
 - [W3C Press Release: Verifiable Credentials 2.0 (2025)](https://www.w3.org/press-releases/2025/verifiable-credentials-2-0/)
 - [Verifiable Credentials Overview — W3C](https://w3c.github.io/vc-overview/)
+- [EUDI Wallet Architecture and Reference Framework (ARF)](https://digital-strategy.ec.europa.eu/en/policies/eudi-wallet-architecture-and-reference-framework)

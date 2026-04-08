@@ -1,11 +1,3 @@
----
-title: Privacy-Preserving Credentials — BBS+ と AnonCreds が拓くゼロ知識開示の世界
-description: ハッシュベースの選択的開示（SD-JWT / mdoc）では達成できない非連結性（Unlinkability）を実現するBBS Signature SchemeとAnonCredsの技術・標準化状況を解説する。
-date: 2026-04-07
-tags:
-  - レビュー済み
----
-
 # Privacy-Preserving Credentials — BBS+ と AnonCreds が拓くゼロ知識開示の世界
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。

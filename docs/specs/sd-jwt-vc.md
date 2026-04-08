@@ -1,8 +1,6 @@
 ---
 title: SD-JWT-based Verifiable Digital Credentials (SD-JWT VC)
 description: JWTと選択的開示を組み合わせたデジタルクレデンシャル形式。EUDI WalletやOID4VCIエコシステムの標準クレデンシャルフォーマットとして採用され、プライバシー保護と軽量実装を両立する。
-tags:
-  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。

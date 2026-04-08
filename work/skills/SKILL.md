@@ -21,5 +21,7 @@ allowed-tools: Read Write Edit Bash Glob Grep WebSearch WebFetch Agent
 - **`📋 Unreviewed content:` のリストがある場合** → **レビューモード**
   `work/skills/review-mode.md` を Read し、その指示（Step R1〜R6）に従って実行してください。
 
+  > **重要**: 品質が十分に見えても、未レビューコンテンツがある限り必ず review-mode を実行すること。スキップは禁止。
+
 - **`✅ All content reviewed` の場合** → **執筆モード**
   `work/skills/write-mode.md` を Read し、その指示（Step 1〜9）に従って実行してください。

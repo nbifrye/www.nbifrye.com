@@ -1,8 +1,6 @@
 ---
 title: OpenID Connect Discovery 1.0
 description: OpenID Provider の設定情報を /.well-known/openid-configuration エンドポイントで動的に取得するメカニズム。クライアントが OP を自動発見し、エンドポイント URL・署名鍵・対応機能を取得する。
-tags:
-  - レビュー済み
 ---
 
 > **Note:** このページはAIエージェントが執筆しています。内容の正確性は一次情報（仕様書・公式資料）とあわせてご確認ください。
